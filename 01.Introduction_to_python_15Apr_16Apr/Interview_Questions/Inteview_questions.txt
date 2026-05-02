@@ -1,0 +1,41 @@
+1. What is Python and why is it popular?
+Python is High level and general purpose programming lang , used in various field like Data science, AI-ML engineer, Cloud Computing, Web Development 
+It is popular bcoz implementation or syntax is very easy to understand
+
+2. Who created Python and when was it first released?
+It is created by Guido Van Russom and it was first released in 1991
+
+3. What are the main features of Python?
+Simple Syntax
+Robust Error
+Multi Paradigm 
+Cross Platform
+Dynamic Typing
+
+4. What is the difference between Python 2 and Python 3?
+In python 2 we dislplay the string like print “Gayatri”
+In python 3 we display the string in proper format like print(“Gayatri”)
+
+For mathematical calculation in version python 2 they show ½ = 0
+But they correct it in python 3 like ½= 0.5
+
+5. What is dynamic typing in Python?
+Dynamic Typing means we declare variables without there data types easily
+
+6. What is the difference between static typing and dynamic typing?
+In static typing we should declare data type of that variable at the time of initialization and in dynamic typing doesn’t need to declare data type of that variable bcoz they are in buit 
+
+7. Why is Python called a cross-platform language?
+Bcoz If we created any python project in windows and run it , later we can access it on mac,ubantu ,linux 
+
+8. What is CPython?
+Cpthon is a implementation for python in that we convert over  src code(.py)  into the byte code(.pyc) using Cpython compiler
+
+9. What is the role of the Python Virtual Machine (PVM)?
+It convert .pyc means byte code into the output format
+
+10. What is the difference between machine code and bytecode?
+Machine code is low level code that computer understand directly it is in binary format
+Byte code is intermediate code generated from high level lang like python , it cant run directly on cpu it needs VM
+
+
