@@ -1,0 +1,444 @@
+-------------18 April------------------
+
+
+1. What is the difference between / and // in Python?
+   / it means normal division it gives answer with decimal pt  and // it is floor division it gives us answer without decimal pt
+
+2. What is the modulus operator used for?
+   modulus operator is used for to find reminder after division
+
+3. What is the exponentiation operator in Python?
+   ** this is exponention operator in python used to find out the base with power of the numbers
+
+4. What will be the output of 5 % 2?
+   Output : 1
+
+5. What will be the output of 5 ** 2?
+   Output : 25
+
+6. What is operator precedence?
+   Operator precedence means priority of that operators 
+
+7. Which has higher priority: * or + ?
+   * has higher priority
+
+8. What will be the output of:
+
+print(2 + 3 * 4)
+Output : 14
+
+9. What will be the output of:
+
+print((2 + 3) * 4)
+Output : 20
+
+10. What will be the output of:
+
+print(2 + 3 ** 2)
+Output : 11
+
+11. What is type conversion in Python?
+ 
+12. How do we convert a float into an integer?
+    if a=3.10
+    then convert float to int -> a=int(a) it gives 3
+
+13. What will be the output of int(3.8)?
+    Output : 3
+    
+14. What will be the output of float("3.14")?
+    Output : 3.14
+
+15. What will be the output of bool(0)?
+    Output : False
+
+16. What will be the output of bool(1)?
+    Output : True
+
+17. What will be the output of bool("")?
+    Output : False
+
+18. What will be the output of bool("Hello")?
+    Output : True
+
+19. Can we convert a string into a complex number?
+    Yes, but valid complex format only 
+
+20. What is the output of complex(True)?
+    Output : (1+0j)
+
+21. If you write 1a = 10, what error will occur and why?
+    error is invalid decimal error
+    occurs because accorindg to indetifier rules variable should be start from alphabet or underscore
+    
+22. Why is False = 10 invalid in Python?
+    Bcoz False is keyword in python
+
+23. If a = 10 and later a = 3.14, what happens to the variable type?
+    variable type will be change from int to float
+ 
+24. Why does 10 / 5 return 2.0 instead of 2?
+    bcoz / this sign indicates the division and it gives result in decimal point
+
+25. Why does int(3.9) return 3 and not 4?
+    bcoz int remove decimal part 
+
+
+-------------20 April------------------
+
+15 Interview Questions
+
+1.What is a string in Python? What types of characters can a string contain?
+  String is a data type in python to store sequence of characters
+  A string can contain alphabets, digits, special symbols, whitespace characters, escape sequences, and Unicode characters
+
+2.What are the four ways to create a string in Python? Give an example of each.
+  (1) text = "Gayatri"
+  (2) text = 'Gayatri'
+  (3) text = """Gayatri"""
+  (4) text = '''Gayari'''
+
+3.What is the difference between """...""" and \ (backslash) for multiline strings? How does the output differ?
+  when we used """...""" this for multiline string it show the output multiline
+  and when we used \ for multiline string is show the output singleline
+
+4.What is string indexing? How does Python’s positive indexing start and in which direction does it go?
+  string indexing means is show the position of particular character of the string
+  positive indexing start from beggining and is goes from left to right
+
+5.What is negative indexing? What does index -1 always refer to in any string?
+  negative indexing start from right to left means accessing the element from the end 
+  ex; text="Gayatri"
+      print(text[-1])
+      Output : i
+
+6.For s = "welcome to india", what is the output of s[-1], s[-5], and s[-16]?
+  Output : s[-1] = a 
+           s[-5] = i 
+           s[-16] = w
+  
+7.What is string slicing? Write the general syntax with start, stop, and step.
+  String slicing means convert string into there substrings
+  syntax : [start,stop,step]
+
+8.In slicing, the stop index is exclusive — what does that mean? Give an example.
+  It means the slice takes characters from start index up to one before the stop
+  ex; text="Gayatri"
+      print(text[1:3])
+      output : ay  
+      it means stop is exculded beacuse they return value "ay" by excluding the value of index no.3 
+
+9.What is the output of "welcome to india"[0:7:2]? Explain why.
+  Output : wloe 
+
+10.What happens when you use s[:] or s[::] on a string? What does it return?
+   ex; s="Gayatri"
+       print(s[:]) it gives Gayatri
+       print(s[::]) it gives Gayatri
+
+11.Can you change a single character of a string using indexing like s[0] = 'W'? Why or why not?
+   no we cant modify or change the string once it created
+   because, string is immutable
+
+12.What is the difference between s[11:16] and s[11:] for s = "welcome to india"?
+   s[11:16] it gives india and s[11:] also gives india
+
+13.What does type("Hello") return? What class do all strings belong to in Python?
+   type("Hello") returns <class 'str'>
+   in python all strings are belong from string class
+
+14.If s = "Python", what is s[1:-1]? Explain the result.
+   Output: ytho
+
+15.What is an escape character? Give two real examples from the notebook (like \' and \).	
+   Escape character is used to give some meaning in string
+   (1) \ = when single quote inside the string
+      text='i\'m gayatri'
+   (2) \ = for backslash
+      text="im gayatri \ "
+
+
+-------------21 April------------------
+
+
+1. What is a string in Python?
+   String is sequence of characters in python
+
+2. Why are strings called immutable objects?
+   Because we cant modify the string once it created
+
+3. What is the difference between indexing and slicing?
+   indexing means it gives position of the character from the string
+   slicing means it convert the string into substring
+
+4. What is the difference between positive indexing and negative indexing?
+   positive indexing starts from beggining of the string and negative indexing starts from ending of the string
+
+5. What happens if we try to modify a string directly?
+   it gives the error like - 'str' object does not support item assignment
+   string is immutable we cant modify it directly ,we must to create new string 
+
+6. What is string concatenation?
+   string concatenation means join two or multiple string together using + operator
+
+7. Which operators are commonly used with strings in Python?
+   strings use +, *, membership (in,not in), and comparison operators(==,!=).
+
+8. What is the purpose of the repetition operator in strings?
+   repetition operator (*) in string is used to repeat a string multiple times
+
+9. What is the use of membership operators in strings?
+   membership operator (in , not in) used in string to find out the characters are present in the string or not 
+
+10. What is the difference between `in` and `not in` operators?
+    'in' - means check the char is present
+    'not in' - means check the char is absent
+
+11. What does the `len()` function return for a string?
+    'len()' function returns the lentgh of the string
+
+12. How do `min()` and `max()` work on strings?
+    'min()' and 'max()' function gives a character according to unicode values
+     ex; s = "Gayatri"
+         print(min(s)) #G
+         print(max(s)) #y
+
+13. What is the use of the `ord()` function?
+    'ord()' used to find out unicode value of character
+
+14. What is the use of the `chr()` function?
+    'chr()' used to find out character by unicode value
+
+15. How can you reverse a string in Python?
+    for ex;
+    s = "Gayatri"
+    print(s[::-1])
+    output:irtayaG
+
+
+-------------22 April------------------
+
+Q1. What is the difference between string methods and string built-in functions? Give the syntax of each.
+    strings methods are specific method only work on string object and string built-in fuctions are work on many data types 
+    they are not part of the strings 
+
+Q2. What are the 5 common categories of string methods in Python? Name one method from each category.
+    Case, Checking, Searching, Replacing, and Splitting/Joining are categories of string methods
+    Case = upper(),lower()
+    Searching = find()
+    Checking = isalpha(), isdigit(), isalnum()
+    Replacing = replace()
+    Spliting = split()
+    Joining = join()
+
+Q3. What does isalpha() return and what are the exact conditions for it to return True?
+    isalpa() returns True or False 
+    condition for it is string must be in alphabets only
+
+Q4. What is the difference between isdigit() and isalnum()? Give one example where their outputs differ.
+    isdigit() checks the string consist numbers and isalnum() checks the string consist both alphabets and numbers
+    ex; text = "3105" 
+        isalpha(text) returns True
+
+        text="Gayatri3105"
+        isalnum(text) returns True
+
+Q5. Does islower() return False if the string contains digits or spaces? Explain with an example.
+    No, It returns False only if there is at least one uppercase letter or no lowercase letters in string
+    ex; text = "abc123"
+        print(s1.islower())   # True
+
+Q6. What is the return type of isalpha(), isdigit(), isalnum(), islower(), isupper(), startswith(), and endswith()?
+    All methods are return answers in True or False so return type is boolean
+
+Q7. What does the find() method return when a substring is NOT found in the string?
+    it returns -1
+
+Q8. Is find() case-sensitive? What will "Hello".find("hello") return?
+    it returns -1
+
+Q9. What is the return value of find() when the substring IS found?
+    -1
+
+Q10. What is the difference between len(), min(), and max() when applied to strings?
+     len() returns the length of the string
+     min() returns the character from the string which unicode value is smaller
+     max() returns the character from the string which unicode value is greater
+
+Q11. Can you call upper() or lower() on an already uppercase or lowercase string? What happens?
+    calling upper() or lower() on same case strings returns the same value
+
+Q12. What will isupper() return for a string that contains digits along with uppercase letters, like "HELLO123"?
+    it returns True (it ignores the digit)
+
+Q13. What is the syntax of startswith() and endswith()? Can they accept a tuple of values?
+    string.startswith(start, end)
+    string.endswith(start, end)
+    yes it accept tuple of values also
+    ex;
+    text = "Python"
+    print(text.startswith(("Py", "Ja")))   # True
+    print(text.endswith(("on", "er")))     # True
+
+Q14. A student wrote print(isalpha(name)). What is wrong with this, and how do you fix it?
+    problem :
+    print(isaplha(name)) 
+    means they take variable in method without declaration of that variable
+    solution:
+    name="Gayatri"
+    print(isalpha(name))
+     
+Q15. What is the difference between find() and index() in Python strings?
+     find() it find out the substring is present in string or not
+     index() it find out the position of the substring
+    
+
+-------------23 April------------------
+
+
+Q1. What does the replace() method do in Python? How many arguments does it take?
+
+--- replace() method used to replace the new string with old string
+    it takes two arguments
+
+Q2. What is the difference between lstrip(), rstrip(), and strip()? Give one example of each.
+
+---istrip() used to remove whitespace from left side
+   rstrip() used to remove whitespace from right side
+   strip() used to remove whitespace from both side
+
+Q3. What does split() return? What is the default delimiter if none is provided?
+
+---split() return divide one string into multiple substring and default delimiter is comma
+
+Q4. What is the difference between capitalize() and title()? Give one example where their output is different.
+
+---capitalize() used when we want to make first letter in upper case of starting string 
+   ex; text="gayatri dewade"
+       text.capitalize()
+       output : Gayatri dewade
+
+    title() used when we want to make first letter in upper case of every string 
+    ex; text="gayatri dewade"
+        text.title()
+        output : Gayatri Dewade
+
+Q5. What does swapcase() do? What will "Hello World".swapcase() return?
+
+---swapcase() used to convert uppercase letters into lowercase and vice versa
+   "Hello World".swapcase() returns hELLO wORLD
+
+Q6. What is the difference between chr() and ord()? Give one example of each.
+
+---ord() returns the unicode value of character
+   ex; ord("a") returns 65
+   chr() returns the character by unicode value
+   ex; chr(65) returns a 
+
+Q7. What does the str() built-in function do? Give one real-life example of when you would use it.
+
+---str() used to convert the data into string format
+   ex; roll_no = 22
+       text = "Your roll no is " + str(roll_no)
+       print(message)
+
+       output : Your roll no is 22
+
+Q8. What does join() do? Which object calls join() -- the list or the separator string?
+
+---join() used to join multiple string 
+    the separator string object calls join()
+    ex; words = ["Python", "is", "high level lang"]
+        sentence = " ".join(words)
+        print(sentence)
+        output: Python is high level lang
+
+
+Q9. What is the difference between split() and partition()?
+
+---split() used to spread the strings into multiple substring
+   ex; words = "Python is high level lang"
+       print(words.split())
+       output : ['Python', 'is', 'high', 'level', 'lang']
+    
+    partition() used to spread the strings into 3 substring
+    ex; words = "Python is high level lang"
+        print(words.partition("is"))
+        output : ('Python ', 'is', ' high level lang')
+
+
+Q10. What does strip() remove from a string? Does it remove whitespace from the middle of a string?
+
+--- strip() removes whitespace from both side of the string, no it doesnt remove whitespaces from the middle of a string
+
+Q11. What is the difference between lower() and upper()? Do they change the original string?
+
+--- lower() is used to convert the string into lowercase 
+    ex; text="Gayatri"
+        text.lower()
+        output : gayatri
+
+    upper() is used to convert the string into uppercase
+    ex; text="Gayatri"
+        text.upper()
+        output : GAYATRI 
+
+    Yes, they change original string also
+
+Q12. What is the difference between str(), int(), float(), and complex() in Python? Which category do they belong to -- methods or built-in functions?
+
+---str() convert the data into string format
+   int() comvert the data into int format
+   float() convert the data into float format
+   complex() convert the data into complex format
+   This are belongs from built in functions of python
+
+
+Q13. What will int("25") return? What will float("25") return? What is the difference in output?
+
+---int("25") returns 25
+   float("25") returns 25.0
+   difference is "25" is in string format int() convert it into integer format and
+   float() convert it into float format 
+
+Q14. Can you convert a float to int using int()? What happens to the decimal part -- does it round off or truncate?
+
+---yes, we can convert float into int 
+   ex; num=10.3
+       int(num)
+       output : 10
+    decimal point will be truncate
+
+Q15. What does complex() do? Give one example of a complex number and how str() converts it.
+
+---complex() convert the string which in format like real + imaginary,real,imaginary into complex number
+   ex; c = complex(10, 4)
+       print(str(c))
+       output : 10+4j
+
+Q16. What will str(10), str(10.5), and str(10+4j) return? What type will each result be?
+
+--- str(10) returns "10"
+    str(10.5) returns "10.5"
+    str(10+4j) returns "10+4j" 
+    String type of result is there
+
+Q17. What does partition() return when the separator is NOT found in the string?
+
+--- it will be return exact string as it is without partition and gives error str.partition() takes exactly one argument (0 given)
+
+Q18. What is the difference between replace() and split()? Can both be used to remove a word from a string?
+
+--- replace() used to replace the new value with older one and split() used to spread the string into multiple substrings
+    no only replace() is used to remove the word and replace there new word
+
+Q19. What will "hello".upper().swapcase() return? Explain method chaining with this example.
+
+---it returns 'hello'
+   beacause , "hello".upper() convert it into "HELLO"  
+   after that "HELLO".swapcase() convert it into "hello" again
+
+Q20. If chr(65) gives "A", what will chr(66), chr(67), and chr(90) give? What concept does this relate to?
+
+---chr(66) = B ,chr(67)= C ,chr(90)= Z
+   It gives unicode value of that character from unicode table 
