@@ -1,0 +1,260 @@
+----------27 April-----------
+
+
+
+Q1. What is Console I/O in Python? What is the difference between input and output?
+    Console I/O in python used to accept and display the data 
+    for input we used input() funtion to accept data from user
+    and for output we used print() function to display data 
+
+Q2. What does the print() function do? Write its full syntax including sep and end parameters.
+    print() function used to display the data 
+    syntax : 
+            (1) print("Gayatri Dewade",sep="-",end="\n")
+            (2) name="Gayatri"
+                surname="Dewade"
+                print("Name : {},Surname :{}".format(name,surname))
+            (3) print(f"Name : {name}, Surname : {surname}")
+
+Q3. What is the default value of sep in print()? What will print("Hello", "World") output?
+    default value of sep in print() is whitespace
+    print("Hello", "World") 
+    Output : Hello World
+
+Q4. What does the end parameter in print() do? What is its default value?
+    end parameter does decide our string or data end with which character
+    by default value is "\n" means next line goes to the new line for print instead of print on same line
+
+Q5. What is the difference between print(name, height, weight) and print(name, height, weight, sep="-")?
+    print(name, height, weight) 
+    Output : name height weight
+
+    print(name, height, weight, sep="-")
+    Output : name-height-weight
+
+Q6. What does the input() function do? What data type does it always return?
+    input() function accept data from used , and it returns in string data type always 
+
+Q7. A user enters 25 using input(). If you directly use it in a calculation, what problem will occur and how do you fix it?
+    If user enters 25 as a input() , when we used it for calculation it will work as a string 
+
+    for ex; text1=intput("Enter the 1st number:") 
+            text2=intput("Enter the 2nd number:") 
+               if user gives text1= 25 and text2=25 as a input
+            print("Addition is :",text1+tex2)
+               it will return 2525 
+
+    means it takes values in string format , so for addition we want to convert it into integer using int()
+
+Q8. What is the difference between print(10) and print("10")? Will the output look the same?
+    print(10) returns 10 in int data type
+    print("10") returns 10 in str data type
+    yes its same value but its data types are different
+
+Q9. What does the type() function do? Give examples of what it returns for int, float, str, and bool.
+    type() function tells us the data type of the variables
+
+    ex ; print(type("10")) 
+         print(type(10))
+         print(type(True))
+         print(type(10+2j))
+
+    Output: <class 'str'>
+            <class 'int'>
+            <class 'bool'>
+            <class 'complex'>
+
+Q10. What does the id() function return? Will two variables with the same value always have the same id?
+    id() returns the memory address of the variables
+    if two variables have the same value but they doesnt have same id because every variable stores in different memory locations
+
+Q11. What is the difference between input() with a prompt string and input() without one?
+    input() with prompt
+    ex; name = input("Enter ur name: ")
+    input() without prompt doesnt pass any message
+    
+
+
+Q12. How would you take name, age, and height as input from a user and print them all in one line with a hyphen separator?
+    ex;
+    name=input("Enter ur name : ")
+    age=int(input("Enter ur age : "))
+    height=float(input("Enter ur height : "))
+
+    print("Name: ",name,"Age: ",age,"Height: ",height,sep="-")
+
+    Output : Name: -Gayatri-Age: -21-Height: -160.1
+
+Q13. What will be the output of the following and why?
+
+val = input("Enter a number: ")
+print(type(val))
+
+    Output : <class 'str'>
+
+    because  by default input() function accept the data in string format we have to convert it into integer format using int()
+
+Q14. What is the difference between print(name) and print("name")? When does each one get used?
+    print(name) it prints variable , used when we already created the variable as name and we want to access it 
+    print("name") it prints string = name , used when we want to pass some message or just simple string
+
+Q15. How is print() different from input()? Which one is used for output and which one is used for receiving data from the user?
+    for input we used input() funtion for receiving data from user
+    and for output we used print() function to display data 
+
+
+
+----------29 April-----------
+
+
+
+Q1. What does the input() function always return, regardless of what the user types?
+    input() function always returns the data in string format , not matters which type of data user gives
+
+Q2. A student writes the following code expecting the output 30, but gets 1020. Why?
+a = input("Enter first number: ")
+b = input("Enter second number: ")
+print(a + b)
+    
+    Because, user accept the data in integer format but by default input() takes the data in string format so we have to convert that data into int()
+    ex ; 
+    a = int(input("Enter first number: "))
+    b = int(input("Enter second number: "))
+    print(a + b)
+    Now it gives the correct answer
+
+Q3. What are the two ways to fix the string addition problem when taking numeric input? Write both solutions.
+    Solution 1 :
+    a = int(input("Enter first number: "))
+    b = int(input("Enter second number: "))
+    print(a + b)
+
+    Solution 2:
+    a = input("Enter first number: ")
+    b = input("Enter second number: ")
+    print(int(a) + int(b))
+
+Q4. What is int() in Python -- is it a method or a built-in function? What types can it convert?
+    int() is built in function in python , it converts float(), str(), bool() into integer format
+
+Q5. What is the difference between int(input()) and first taking input then converting using int()?
+    when we used int(input()) means when we accept the data it accept in integer and 
+    when we used int() after taking input means it accept in string , and then convert it into integer
+
+Q6. What does id() return in Python? What does the id number represent?
+    id() return in python memory address of variable it represent the memory location of the variable
+
+Q7. If you assign a variable num = 10 and then reassign num = 30, does the id change? What does this tell you about integers?
+    Yes, id will be change because integers are immutable so once we assign variable and after that reassign it memory address will be change both time
+
+Q8. What does immutable mean in Python? Which data types are immutable?
+    immutable means we cant modify it after created
+    Basic data types are immutable in python like integer, string, float, bool, byte
+
+Q9. What is the difference between mutable and immutable data types? Give one example of each.
+    mutable means we can modify it after create for ex; list
+    immutable means we cant modify it after created for ex; integer
+
+Q10. When you modify a list element like list1[0] = 15, does the id of the list change? What does this tell you about lists?
+    No,after modification id of the list will not change because list is mutable
+
+Q11. What happens when you try to convert a float string like "10.5" directly using int()? Will it work?
+    NO it will not work , because we have to convert that string into float and then float into string
+    ex; print(float("10.5"))
+        Output : 10.5
+        then,
+        print(int(10.5)) 
+        Output : 10
+
+Q12. What is the difference between float() and int() when converting user input?
+    float() used to convert the data with decimal point and int() used to convert data without decimal point
+    for ex; for weight we have to used float() and for roll no we have to used int()
+
+Q13. Why is it important to convert input() to int() or float() before doing arithmetic operations?
+    Becaue, by default input() accept the data in string format which is not work for arihtmetic operations so we have to convert it into float() and int() format
+
+Q14. What will type(input()) always return no matter what the user types -- int, float, or str?
+     type(input()) is string
+
+Q15. In memory, when num1 = 10 and then num1 = 10.1 is assigned, what happens to the old memory location storing 10?
+    when in memory num1 = 10 and then num1 = 10.1 is assigned , old memory location doesnt change 
+    old memory location and new one is different 
+
+
+
+----------30 April-----------
+
+
+
+Q1. What are the three main ways to print formatted output in Python?
+    (1) print("Gayatri Dewade",sep="-",end="\n")
+    (2) name="Gayatri"
+        surname="Dewade"
+        print("Name : {},Surname :{}".format(name,surname))
+    (3) print(f"Name : {name}, Surname : {surname}")
+
+Q2. What is string concatenation? What operator is used for it?
+    string concatenation is used to join multiple string and + operator used for it
+
+Q3. Why do you need to convert an integer to str() before using string concatenation? What error occurs if you don't?
+    Because concatenation is method of string , it join only string type of data together
+    if yout dont convert ,it will show error like can only concatenate str (not "int") to str
+
+Q4. What is the difference between the normal print method and string concatenation?
+    Ex;
+    name="Gayatri"
+    surname="Dewade"
+    print("Concat :"+"Name - "+name+"Surname- "+surname)
+    print("Normal :","Name - "+name,"Surname- ",surname)
+
+    Output : Concat :Name - GayatriSurname- Dewade
+             Normal : Name - Gayatri Surname-  Dewade
+
+Q5. What does {} represent inside the format() method?
+    {} represent the variables inside the format() method
+
+Q6. Does the order of variables inside format() matter? What happens if you change the order?
+    Yes, order of variables matters inside the format() 
+    if we change they interchange the variables with eachother 
+
+Q7. What is an f-string? What letter do you write before the string and why?
+    f-string is directly right variable inside the string using {}
+    f is used to write string, because it tells python that it is formatted string
+
+Q8. What is the difference between format() and f-string? Which one is easier to read?
+    In format() method we assign {} empty and later fills values/variables in it using .format() method
+    and in f-string we assign variables in {} 
+    f-string is easier to read
+
+Q9. Can you perform calculations directly inside an f-string like {price * qty}? Does it work?
+    Yes it will work
+    ex ;
+    Price = 100
+    Quantity = 5
+    print(f"Price: {Price}, Quantity: {Quantity}, Total_Price: {Price * Quantity}")
+
+Q10. What will happen if you write print("Age: " + 25)? How do you fix it?
+    Problem : 
+    print("Age: " + 25)
+
+    Solution :
+    Age is a integer data type , for integer data type concatenation never works so,
+    print("Age: ",25)
+
+Q11. Which printing method is the most modern and recommended in Python 3 -- normal, format(), or f-string?
+    normal() method is most modern and recommended in python
+
+Q12. Write the same sentence using all three methods -- normal print, format(), and f-string -- for name = "Raj" and age = 22.
+
+    name = "Raj" 
+    age = 22
+
+    print("Name :",name,"Age :",age)
+    print("Name : {} Age : {}".format(name,age))
+    print(f"Name : {name} Age : {age}")
+
+    Output : 
+
+    Name : Raj Age : 22
+    Name : Raj Age : 22
+    Name : Raj Age : 22
