@@ -1,0 +1,178 @@
+-----------Decision controll instructions-----------
+
+Q1. What is decision control in Python? Why do we need it?
+    Decision control in python are the instructions used for checking conditions
+    
+Q2. What is the syntax of a simple if statement? What happens if the condition is False?
+    if condition:
+        statement1
+        statement2
+
+    if condition becomes false it will terminate 
+
+Q3. What is the difference between if and if-else statement?
+    if statement used for checking single condition , if that condition is false it will terminated
+    if-else statement used for checking 2 conditions , after checking both conditions it will terminated
+
+Q4. What is the difference between if-else and if-elif-else?
+     if-else statement used for checking 2 conditions , after checking both conditions it will terminated
+     if-elif-else statement used for checking multiple conditions
+
+Q5. How many elif blocks can you write in a single if-elif-else statement?
+    multiple elif blocks we can write in a single if-elif-else statement
+
+Q6. What is indentation in Python? What happens if you do not indent the code inside an if block?
+    indentation means statement are placed on right position , so when we used loops that can understand statments for execution
+    if we didnt used proper indentation in if block they will not able to check statemetns for given condition
+
+Q7. What is the difference between the and operator and the or operator?
+    and operator used when both values are must be true for execute the statement
+    or operator used when from both values at least one value should be true for execute of condition
+
+Q8. When does and return True? Give one example.
+
+    and returns True when both values are true
+    ex; age=int(input("Enter ur age :"))
+        nationality=input("Enter ur nationality : ")
+
+        if (age>=18) and (nationality==indian):
+            print("Eligible for voting")
+        else
+            print("Not Eligible for voting")
+    
+
+Q9. When does or return True? Give one example.
+    or returns True when at least one values is true from both
+    ex; age=int(input("Enter ur age :"))
+        nationality=input("Enter ur nationality : ")
+
+        if (age>=18) or (nationality==indian):
+            print("Entry allow")
+        else
+            print("Entry denied")
+
+Q10. What will be the output of the following and why?
+x = 10
+if x > 5:
+    print("Greater")
+print("Done")
+
+    Output : Greater
+             Done
+
+    Because 10>5 according to condtion it is true 
+
+Q11. What is the difference between = and == in Python? Which one is used in if conditions?
+    = this is assignment operator used to assign values
+    == this is comparison operator used to compare two values
+    == this operator used in if statement
+
+Q12. Can you write an if statement without an else block? Is else mandatory?
+    Yes we can write an if statement without an else block when we have to just check one codition , if condition is true print statment otherwise terminate 
+
+Q13. What happens if none of the elif conditions are True and there is no else block?
+    if none of the elif conditions are true and there is no else block , its returns nothing 
+    terminate from the loop
+
+    ex; x = 5
+        if x > 10:
+            print("Greater than 10")
+        elif x > 8:
+            print("Greater than 8")
+
+        print("Program continues")
+
+        Output : Program continues
+
+
+Q14. Can you use and and or together in the same condition? Give one example.
+    Yes,
+    ex; age = 20
+        has_id = True
+        is_student = False
+        
+        if (age >= 18 and has_id) or is_student:
+            print("Allowed entry")
+        else:
+            print("Not allowed")
+
+            Output : Allowed entry
+
+
+Q15. What will be the output and why?
+num = 15
+if (num > 10) and (num < 20):
+    print("Number is between 10 and 20")
+else:
+    print("Number is out of range")
+
+    Output : Number is between 10 and 20
+    Because 15 is between 10 and 20 given condition becomes true 
+
+
+-----------Repetation controll instructions-----------
+
+Q1. What is a loop in Python? Why do we use loops?
+    loop is a block for Repetation purpose in python used to checking condtions
+    if condition is true then it enters in block and execute the statements
+
+Q2. What is the difference between a while loop and a for loop?
+    while loop used when we want to check condition it will repeat until condition becomes true
+    for loop used when we alreay know the iteration count , means how many times repeatation happens 
+
+Q3. What is the syntax of a while loop? What happens if the condition never becomes False?
+    while conditon:
+        statement
+    If condtion never becomes false , it will print statement infinite times
+
+Q4. What is an infinite loop? How can you avoid it in a while loop?
+    infinite loop comes when there is not false condition until false condition comes it will print statement 
+    to avoid we have to declare some false statement outside the while loop 
+
+Q5. What is the syntax of a for loop in Python?
+    for var_name in sequence:
+        statement
+
+Q6. Can a for loop iterate over a string? What does it print for each iteration?
+    yes, for loop iterate over a string also
+    ex; text = "Python"
+        for ch in text:
+            print(ch,end=" ")
+
+    Here each line print single character from text
+    Output :P y t h o n
+
+Q7. What is the range() function? Write its full syntax with start, stop, and step.
+    range() function used for generate sequence of numbers
+    syntax : range(start,stop,step)
+
+Q8. What does range(5) generate? What does range(1, 6) generate?
+    range(5) generates sequence of numbers from 0 to 4
+    range(1,6) generates sequence of numbers from 1 to 5
+
+Q9. What is the difference between range(10) and range(0, 10)?
+    both are same they generate sequence of numbers from 0 to 9
+
+Q10. What does the step parameter in range() do? What will range(0, 10, 2) generate?
+    step() paramter in range used to skip out the numbers
+    range(0,10,2) gives 0 2 4 6 8
+
+Q11. What does the break statement do in a loop? When is it used?
+    break statement used to terminate the loop from that iteration
+
+Q12. What does the continue statement do in a loop? How is it different from break?
+    continue statment used to skip that iteration and print entire sequence 
+    yes its different because continue statement print enitre sequence after skip that iteration but break statment terminates when that iteration comes
+
+Q13. What will happen to the rest of the loop iterations when break is encountered?
+    when break is encountered , it will terminate from the loop immediately at that point 
+
+Q14. What will happen when continue is encountered -- does it stop the loop or skip only that iteration?
+    it will skip that iteration only
+
+Q15. What is the difference between while loop and for loop -- when would you prefer one over the other?
+    the difference is how the iteration controll
+    for loop used when  we know number of iterations already
+    while loop used when we dont know the number of iterations it runs until condtion becomes true
+    i prefer for loop when i want iteration for specific number of times and i prefer while loop
+    for checking some conditions
