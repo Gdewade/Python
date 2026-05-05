@@ -1,0 +1,60 @@
+Q1. What is a function in Python? Write its definition in one line.
+    Function is a logic behind any operation , used to perform some specific task
+    function definition : def funtion_name():
+
+Q2. What are the advantages of using functions? Name all 5 from your notes.
+    (1) improve readability
+    (2) reusability
+    (3) modularity
+    (4) easy to maintain
+    (5) testing and debugging
+
+Q3. What is the syntax of a user-defined function in Python? What keyword is used to define it?
+    syntax of a user-defined function in Python = def function_name:
+    keyword used to define it is def
+
+Q4. What is the difference between defining a function and calling a function?
+    function definition means create a function body / build logic
+    function calling means declare function_name() outside the function for accessing the function_definition
+
+Q5. What are the two types of functions in Python? Give two examples of each.
+    (1) Built-in function : ex; len(),max(),min()
+    (2) User defind function : ex; def cal_simple_interest():
+
+Q6. What is the difference between a parameter and an argument?
+    Parameter are the variable declare in function_name in function_definition
+    Argumetns are the actual values of parameters
+
+Q7. What is the function naming convention in Python? Give one good example and one bad example.
+    Function naming conventions are function name should be return in lower case and if function_name contains multiple words always used _ to separate them
+    good ex; def simple_interes():
+    bad ex; def Simple Interest():
+
+Q8. What does the return statement do? What happens if a function has no return statement?
+    return statment send value back to the caller used to access the result outside the function definition , we can store,reused it everywhere in program
+    if we didnt used return function we cant access the result outside the function definition in program 
+
+Q9. What is the difference between a function that uses print() inside it vs a function that uses return?
+    print() used for display output only we cant reused that values again
+    return function send value to caller, used to access ,store and reused everywhere in program
+
+Q10. Can a Python function return more than one value? How do you store multiple returned values?
+    yes, python fucntion return more than one value
+    to store multiple return value we used , delimeter for ex, return res1,res2,res3
+
+Q11. What is a function body? What is the role of indentation inside a function?
+     function body is the block of code written inside a function definition
+     indentation is very important because it defines the scope of the function body,it defines which statements belong to the function and ensures correct execution
+
+Q12. Can you call a function multiple times? What is the advantage of doing that?
+    yes we can call function multiple times using function calling method, advantage is we doesnt need to create the function every time
+
+Q13. What is code reusability? How do functions help achieve it?
+    code reusability means we used same code for multiple time, using function calling method
+
+Q14. What will happen if you call a function before defining it in Python?
+    Python execute code line by line if we call it before defining it will not recognize it and shows NameError
+
+Q15. What is modularity in programming? How do functions help in making code modular?
+    modularity in programming means make complex programs into simple format or logic
+    to making code modular we used code reusability, debugging, readability, maintainability
