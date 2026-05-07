@@ -1,0 +1,241 @@
+-------------3 May----------------
+
+Q1. What is a list in Python? What is another name for it?
+    list is a data type of python which is store the data in ordered format
+    dynamic array is another nam of list
+
+Q2. What are the 4 key characteristics of a list?
+    (1) Mutable in nature
+    (2) Can store all data types data
+    (3) Dynamic in nature
+    (4) Allows duplicate values
+
+Q3. What is the difference between homogeneous and heterogeneous list? Give one example of each.
+    homogeneous list is the list where we store only same type of data in a list
+    ex; list1=[1,2,3,4] 
+
+    heterohgeneous list we store multiple type of data in a list
+    ex; list1=[1,"Gayarti",True,0.1,1+2j]
+
+Q4. What is the difference between basic data types and container data types? Name all container data types in Python.
+    basic data type are like int,float,string,bool,complex,byte and container data types are like list,tuple,dict,step
+
+    Basic data type used to assign a type of data and conatiner data type used to store data of various types
+
+Q5. What is list indexing? What is the difference between positive and negative indexing?
+    list indexing means find out the position of the variable in list
+    Positive indexing starting from left side , from index[0]
+    Negative indexing starting from right side , from index[-1]
+
+Q6. What index does the first element always have? What index does the last element always have in negative indexing?
+    index[0] is first element always have
+    in negative indexing last element have index[-1]
+
+Q7. What is list slicing? Write the full syntax with start, end, and step.
+    list slicing means create sublists from main list
+    sytanx : list_name[start:end:step]
+
+Q8. In slicing, the end index is exclusive -- what does that mean? Give one example.
+    Means the doesnt consider end index while printing sublist they consider the one index before that end index
+    ex ; list1=[1,2,3,4,5]
+         print(list1[0:3])
+         Output : 1 2 3 
+
+Q9. What does list[:] return? What does it mean when both start and end are omitted?
+    list[:] gives entire list
+
+Q10. What is the difference between mutable and immutable? Is list mutable or immutable?
+    mutable means we can change or modify the data after created , without changing the mem address
+    immutable means we cant change or modify the data after created , it will change the mem address 
+    list is mutable in nature
+
+Q11. Are duplicate values allowed in a list? Give one example.
+    Yes , duplicates are allow in list
+    ex; list1=[1,2,3,2,5]
+        print(list1)
+        Output : 1 2 3 2 5
+
+Q12. How do you loop through a list using a for loop? Write the syntax.
+    loop through in a list means to proecss each element of the list individually
+
+Q13. What is the enumerate() function? When would you use it instead of a normal for loop?
+    enumerate() is a built in function it returns index with its values
+
+Q14. What is the difference between for loop and while loop when iterating through a list?
+    when we used for loop here we know the iterations and while loop we used to process some condition and gives the iteration
+
+Q15. What will len() return for an empty list? What will it return for a list with 5 elements?
+    len() gives 0 for emoty list, if list with 5 elements are there it will return 5
+
+
+-------------4 May----------------
+
+
+Q1. What is mutability in Python?
+    Why is a list called a mutable data type?
+
+    Mutability means we can modify the data type after it created
+    Because , we can modify it after it created it doesnt change its memory address
+ 
+Q2. How is a list different from an integer in terms of mutability?
+    list is container data type and it is mutable in nature 
+    integer is basic data type and it is immutable in nature
+ 
+Q3. What is list concatenation? Which operator is used?
+    list concatenation means merge or join two strings for that we used + operator
+ 
+Q4. Does list concatenation modify the original lists?
+    No, its creates new list of concatenation
+ 
+Q5. How do you convert a string into a list in Python?
+    What function is used?
+
+    to convert string into list we used list() function
+    ex; string1="Gayatri"
+        print(list(string1))
+        Output : G a y a t r i
+
+Q6. Can we convert a tuple and a set into a list? How is it done?
+    Yes, we can convert tuple and set into a list
+    its done using list() built in function
+    ex; tuple1=(1,2,3)
+        print(list(tuple1))
+        Output : [1,2,3]
+
+        set1={1,2,3}
+        print(list(set1))
+        Output : [1,2,3]
+ 
+Q7. What is aliasing in Python lists?
+    aliasing means we refer two or more list to the same memory location
+    for ex; list1=[1,2,3]
+            list2=[4,5,6]
+            list1=list2 # alicing syntax
+            Output : print(list1) = 4 5 6
+
+Q8. What problem does aliasing cause?
+    Problem is when we update the list2 it affects on list1 also
+    
+Q9. How can you check whether two variables are aliases of each other?
+    we check its memory address to check whether two var are aliasee=s of each other or not,
+    because when we did aliasing two variables store in same memory address
+ 
+Q10. What is cloning in Python lists?
+    cloning also like a aliasing it returns a new list (shallow copy) of the original list but on different memory location
+    but here modification doesnt affect of cloning list
+ 
+Q11. What is the difference between aliasing and cloning?
+    cloning also like a aliasing it refers two or more list to the same memory location
+    but here modification doesnt affect of cloning list
+ 
+Q12. What is the `in` operator in Python lists? What does it return?
+    'in' operator is used to check that element is present in the list or not
+     if the element present in the list it returns True otherwise False
+ 
+Q13. Is the `in` operator case-sensitive when checking
+     string elements in a list?
+
+    Yes, its case sensitive
+ 
+Q14. How do you check if a list is empty in Python?
+     What is the Pythonic way to do it?
+
+     There are two types to check the list is empty or not
+
+     (1) list_name=[]
+     (2) list_name=list()
+ 
+Q15. What does len() do in a list?
+    len() checks the length of the list means how many elements are contain in list
+ 
+Q16. What is the difference between max() and min()?
+    min() gives the minimum value from the list and max() returns the maximum value from the list
+ 
+Q17. What does sum() do? Can it be used on a list containing strings?
+    sum() gives the addition of the elements from the list
+    No, we cant used on a list containing strings because for summation string need same data type 
+ 
+Q18. What is the difference between any() and all()?
+    any() gives True if any item is true in list (it returns false only when all items are 0)
+    all() gives True if all item are true in list (it returns false when atleast one item is 0)
+
+Q19. What does sorted() do? Does it change the original list?
+    sorted() gives the elements in sorted ascending order , it doesnt change original it creates new one
+ 
+Q20. What does reversed() return? Why do we need list()
+     around it to print the output?
+
+     reversed() gives the elements in reverse order 
+     we need list() because reversed() gives an iterator object, not a list
+     We use list() to convert it into a readable sequence of elements
+    
+
+
+-------------5 May----------------
+
+
+Q1. What is the syntax for calling a list method in Python?
+    Syntax : list_name().method_name()
+ 
+Q2. What does append() do? Where does it add the element?
+    Can it add only one element at a time?
+    
+    append() used to add single element at the end of the list
+    yes , it add only one element at a time
+ 
+Q3. What is the difference between append() and insert()?
+    append() used when we want to add a single element at the end of the list
+    insert() used when we want to add a element on a particular position/index
+ 
+Q4. What does insert() do? What two arguments does it take?
+    What happens to the existing elements when insert() is used?
+
+    insert() used to add a element on a particular position
+    it takes two argument insert(index_no,value) where index_no is position where we want to add a new value and value is the element we want to add
+    when we used insert() existing list will be change,existing elements are goes forward or backword
+ 
+Q5. What does extend() do? How is it different from append()?
+    extend() used to insert another list(multiple items) into at the end of existing list, we used this when we want to add multiple items 
+ 
+Q6. What is the difference between extend() and the + operator
+    for joining two lists?
+    extend() 
+
+
+Q7. What does remove() do? Does it remove by value or by index?
+    What happens if the value appears more than once in the list?
+ 
+Q8. What does pop() do when called without any argument?
+ 
+Q9. What does pop(index) do? How is it different from pop()?
+ 
+Q10. What is the difference between remove() and pop()?
+ 
+Q11. What does clear() do? After calling clear(), does the list
+     variable still exist?
+
+Q12. What does index() do? What does it return?
+     If a value appears more than once, which occurrence does
+     index() return?
+ 
+Q13. What does count() do? What does it return?
+
+Q14. What does sort() do? Does it modify the original list
+     or return a new one?
+ 
+Q15. What is the difference between sort() and sorted()?
+ 
+Q16. What does reverse() do? Does it modify the original list
+     or return a new one?
+ 
+Q17. What is the difference between reverse() and reversed()?
+ 
+Q18. What does copy() do? What kind of copy does it create?
+     How can you verify that the copy is at a different
+     memory location?
+
+Q19. How does Python compare two lists?
+     What does it compare — the length or the elements?
+ 
+Q20. How does Python decide which list is greater when comparing
+     two lists element by element?
