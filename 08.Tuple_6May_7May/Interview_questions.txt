@@ -1,0 +1,251 @@
+---------------6 May-------------
+
+I1. What is a tuple in Python? Define it in one sentence.
+    tuple is a container data type in python store elements in ordered using () 
+ 
+I2. Which brackets are used to create a tuple?
+    () brackets are used to create tuple
+ 
+I3. What is the difference between a homogeneous tuple
+    and a heterogeneous tuple? Give one example of each.
+    homogeneous tuple stored elements with similar data tyoe
+    hetrogeneous tuple stored elements with different data tyoe
+
+I4. What does "ordered" mean for a tuple?
+    ordered means tuple keeps insertion order of the elements
+ 
+I5. How do you access individual elements of a tuple?
+    What is the starting index of a tuple?
+
+    to access individual element of tuple we use indexing
+    starting index of tuple is 0
+
+I6. What does "immutable" mean for a tuple?
+    immutable means we cant change,add and remove elements from the tuple
+    But if we create the tuple of same name for modification it will change there memory address
+ 
+I7. What are the three operations you CANNOT perform on a tuple
+    because it is immutable?
+
+    count(),insert(),remove(),append()
+ 
+I8. Why would you use a tuple instead of a list?
+
+
+I9. Does a tuple allow duplicate values?
+    Give an example.
+    Yes, tuple allows duplicates values
+    ex; tuple1=(10,20,30,20)
+        print(tuple1)
+        Output : (10,20,30,20)
+ 
+I10. How do you create an empty tuple in Python?
+     What does type() return for an empty tuple?
+
+     syntax of create empty tuple in python : tuple_name=()
+     type() return for empty tuple is also tuple
+
+I11. How do you create a tuple with only one element?
+     What happens if you forget the trailing comma?
+     Using trailing comma 
+     ex; tup=(1,)
+         print(tupe) = gives (1)
+
+    when we forget to used trailing comma it will give you the output without () and in integer class
+ 
+I12. What is the output of type((25)) and type((25,))?
+     Explain the difference.
+
+     type(((25))) = < Class : 'int'>
+     type(((25,))) = < Class : 'tuple'>
+
+
+I13. What is the difference between positive indexing
+     and negative indexing in a tuple?
+     Give an example for each using tup1 = (10, 20, 30, 40, 50).
+
+     positive indexing means indexing start from the left side with starting index 0
+     negative indexing means indexing start from the right side with ending index 0
+
+     for ex;
+            tup1 = (10, 20, 30, 40, 50).
+            print(tup1[2]) # returns 30
+            print(tup1[-3]) # returns 20
+
+
+I14. What does tup1[-1] return? What does tup1[0] return?
+    tup1[-1] # returns 50 (last element of the list)
+    tup1[0] # returns 10 (first element of the list)
+
+I15. What is slicing in a tuple? Write the syntax.
+    slicing means extract sub tuples from the main tuple
+    syntax : tup_name[start:stop:step]
+ 
+I16. What is the difference between tup1[2:] and tup1[:2]?
+    tup1[2:] # returns (30,40,50)
+    tup1[:2] # returns (10,20)
+
+ 
+I17. How do you reverse a tuple using slicing?
+     Write the slicing expression.
+     for reversing tuple using slicing we used step = -1
+     slicing expression for reversing : tuple_name[::-1]
+
+I18. Name three ways to loop through a tuple in Python.
+    (1) for 
+    (2) for in range:
+    (3) while (condition:)
+ 
+I19. When would you use enumerate() instead of a regular
+     for loop on a tuple?
+
+     When we want to print values with index number we used enumerate()
+
+I20. What is the difference between a for loop and a
+     while loop when iterating over a tuple?
+
+     for loop used when we know the iteration values and while loop doesnt know iteration value it will be run until condititon become false
+
+I21. What is the output of type((10)) and why?
+    Output of type((10)) is integer because 10 is store as a integere without trailing comma
+
+ 
+I22. Can a tuple contain another tuple inside it?
+     Give an example.
+
+     Yes we can store a tuple into another tuple 
+     for ex; 
+
+     tup1=(1,2,3)
+     print(tup1)
+     tup2=(4,5,6,tup1)
+     print(tup2)
+ 
+     Output : 
+
+     (1, 2, 3)
+     (4, 5, 6, (1, 2, 3))
+
+I23. What is the difference between a list and a tuple?
+     Give at least three points.
+
+     list:
+     (1) List is mutable in nature
+     (2) List store elements in [] brackets
+     (3) List used various built in functions and methods to modify
+
+     tuple:
+     (1) Tuple is immutable in nature
+     (2) Tuple store elements in () brackets
+     (3) Tupke doesnt have various built in functions and methods to modify
+
+
+---------------7 May-------------
+
+Q1. What does immutability mean for a tuple?
+    Name the three operations that are NOT allowed on a tuple.
+
+    immutability means we cant add,remove or change value from tuple, if we try to add,remove and change it and reassign that variable they will be change memory address
+    operations which are not allow in tuples are = .copy(),.append(),.remove()
+
+Q2. What error is raised when you try to modify a tuple element?
+    'tuple' object has no attribute .copy()
+
+Q3. Why are tuples considered safer than lists for storing
+    fixed data?
+    Because , tuples are immutable so our data is safe , no one can modify it or copy it and list is immutable it can add,remove or change the elements
+
+Q4. What is tuple concatenation? Which operator is used?
+    tuple concatenation means adding two tuples and form single tuple
+    '+' operator is used 
+
+Q5. Does concatenation change the original tuples?
+    What does it return?
+    It doesnt change original tuple , it returns both tuple elements in new tuple
+
+Q6. What is merging in tuples? How many tuples can be merged?
+    Merging is also like concatenation we can join or add to many tuples together
+
+Q7. What operator is used for merging tuples?
+    How is merging different from concatenation?
+    '+' operator is used for merging tuple
+    Usually merging and concatenation is same but for adding two tuple we used concatenation and for adding multiple tuples into one we used merging
+
+Q8. Which function is used to convert other data types to a tuple?
+    Name four data types that can be converted.
+    tuple() function is used to converting multiple data types into tuple
+    list,set,string,dict can be converted into tuple
+
+Q9. What happens when you pass a string to tuple()?
+    What does each element of the resulting tuple contain?
+    when we pass string to tuple that string is convertet into tuple
+    and each element of resulting element contain single character with '' from that string
+
+Q10. When a dictionary is converted to a tuple using tuple(),
+     what is stored — keys, values, or both?
+     when a dictionary is converted to a tuple keys are stored
+
+Q11. Why does converting a set to a tuple give a different order
+     each time? What property of sets causes this?
+     Because set is a unordered data type 
+
+Q12. What is aliasing in tuples?
+     aliasing in tuple means two tuples refer same memory address
+
+Q13. How can you check if two tuple variables are aliases
+     of each other?
+     using '=' this operator we aliasing tuple and using identity 'is' check that tuples are aliases of each other
+
+Q14. Since tuples are immutable, is aliasing in tuples
+     as dangerous as aliasing in lists? Explain.
+     No, Tuple aliasing is usually safe because tuples are immutable 
+     Lists are mutable we can modify it thats why its risky
+
+
+Q15. What is cloning in tuples? Which method is used?
+    cloning means two tuples refers to the two different mem location
+    using .copy() or tuple()
+
+Q16. What is the key difference between aliasing and cloning
+     in terms of memory?
+     aliasing means two tuples refers same mem location and cloning means two tuples refers different mem location
+
+Q17. Since tuples are immutable, why would you still need
+     to clone a tuple?
+     Because cloning reffers same mem address and its safe , and also avoid confusion in large program instead of aliasing
+
+Q18. What is the purpose of the `in` operator in tuples?
+     What are the two values it can return?
+     'in' operator is used to check that element present in tuple or not
+     if present it return True otherwise False
+
+Q19. What is the difference between `in` and `not in` operators?
+    'in' operator used to check that element is present in tuple or not
+    'not in' operator used to check that element is present or not in tuple
+
+Q20. What does the `is` operator check in Python?
+     How is it different from the == operator?
+     'is' operator is used to check that both tuples are on same mem locations
+     '==' operator is used to check equality of both tuples
+
+Q21. When will tup1 is tup2 return True?
+     When will it return False?
+     Returns True when tup1 and tup2 have same mem location otherwise it returns False
+
+Q22. How do you check if a tuple is empty in Python?
+     What operator is used?
+     using 'not' operator in if-else condition to check that tuple is empty or not
+
+Q23. What does Python return when you check
+     bool(()) and bool((1, 2, 3))?
+     bool(()) returns False
+     bool((1, 2, 3)) return True
+
+Q24. How does Python compare two tuples?
+     Does it compare their lengths or their elements?
+     Using comparision opertors (>,<,<=,>=,==) python compare two tuples
+     It comares their elements
+
+Q25. Given a = (1, 2, 3, 4) and b = (1, 2, 5):
+     Why does a < b return True even though a has more elements?
+     Because it compare By element not length so here 3<5 means 5 is greater so it returns True
