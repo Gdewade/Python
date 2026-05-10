@@ -1,0 +1,127 @@
+================================================================
+        PYTHON SETS — INTERVIEW QUESTIONS
+================================================================
+
+-------------8 May--------------
+
+
+
+Q1. What is a set in Python?
+    set is like a list used to store data expect duplication
+
+Q2. How are sets different from lists?
+    lists allow duplicate values and sets are not allow duplicate values
+
+Q3. How does Python handle duplicate values in a set?
+    In set python handle duplicates value by hashing technique it means it gives hash value to the every element if duplicate is come it will ignore it
+
+Q4. Why can't we use indexing on a set?
+    Because sets are unordered data type
+
+Q5. What is the correct way to create an empty set? Why can't
+    we use {}?
+    Correct way to create an empty set is set1=set()
+    {} when we used this it will create a dictonary
+
+Q6. What is the difference between aliasing and cloning a set?
+    aliasing means two sets refers same memory location and cloning means two sets refers different memory location
+
+Q7. What does the 'is' operator do when used with sets?
+    'is' operator is used to check both sets are in same memory locations
+
+Q8. What does the 'in' operator do with sets?
+    'in' operator is used to check that element is present in the set or not
+
+Q9. Can a set contain a list as an element? Why or why not?
+    No,set cant contain a list as a element because list store duplicate values and duplicate values are not allow in set
+
+Q10. What will be the output of the following and why?
+     s = {True, 1, False, 0}
+     print(s)
+
+     Output = True,False
+
+Q11. How can you iterate over a set in Python?
+     for iteration over a set in python we used for loop
+
+Q12. What does the < operator mean when comparing two sets?
+    < it check one set is a proper subset of anoter set
+
+Q13. How is a set stored internally in Python?
+    set stored internally in python using hashtable
+
+Q14. What are the different ways to convert other data types
+     to a set?
+     using set() function we cant convert string,range,list,dict into set
+
+Q15. Are sets mutable in Python?
+    No, set are not mutable in python
+
+
+-------------9 May--------------
+
+
+Q1. What are the built-in functions available for sets in Python?
+    Name all 7 covered in this topic.
+    
+    len(),min(),max(),sum(),any(),all(),sorted()
+
+Q2. What does sorted() return when applied to a set? Is it still
+    a set?
+    It return sorted elements in list
+
+Q3. What is the difference between any() and all()?
+    any() returns True when atleast one element should be True
+    all() returns True when all elements are true 
+
+Q4. What will any() return if the set is empty? What about all()?
+    any() returns False and all() returns True
+
+Q5. What is the difference between add() and update() in sets?
+    add() used to add a single element in set
+    update() used to add another set into existing set
+
+Q6. What is the difference between remove() and discard()?
+    remove() and discard() both used to delete element from the set
+    if element is not present remove() returns keyerror and discard() returns none
+
+Q7. When would you use discard() over remove() in real code?
+    discard() is used in exception handeling and remove() is used when element is absent its should be raised error
+
+Q8. What does clear() do to a set? What does the set look like
+    after calling clear()?
+    clear() used to delete all elements from the set
+    After calling clear it returns empty set()
+
+Q9. What is the difference between clear() and del when used
+    on a set?
+    clear() used to delete all elements from the set and del used to delete entire set variable
+
+Q10. What does copy() return? How is it different from simple
+     assignment (set2 = set1)?
+     copy() returns refernce of the another set into present set , when we used copy() modification done on old set not affect on new one
+     set2=set1 retuns same but when modification done it will affect on new one
+
+Q11. Can you use update() to merge more than two sets at once?
+    yes
+
+Q12. What error is raised when remove() is called with an
+     element that does not exist in the set?
+     Keyerror is raised
+
+Q13. What will len() return for a set created as:
+     s = {True, 1, False, 0}
+     Explain your answer.
+     len() returns 2 
+     Because in set they doesnt allow duplicate values and True - False are bool datatypes but their value is 1-0
+
+Q14. What does sum() return for a set containing boolean values
+     like {True, True, False}? Explain.
+     sum() returns 2 
+     Because boolean values of True =1 and False =0
+
+Q15. After calling clear() on a set, what will any() and
+     all() return on that empty set? Why?
+     any() returns False and all returns True
+     Because any() returns true when atleast one element is true and all() returns true when all elements are true
+     but, empty set doesnt content any false value so all() return True
