@@ -1,0 +1,169 @@
+Q1.  What is a dictionary in Python? How is it different from
+     a list?
+     Dictionary is container data type which stores value in key-value pair
+     In list duplication is allow and in dictionary duplication is not allow
+
+Q2.  What is the syntax of a dictionary? What brackets are used
+     and how are key-value pairs written?
+     Syntax : dict_name={key1:val1,key2:val2,....}
+
+Q3.  Can a dictionary have duplicate keys? What happens if you
+     define the same key twice?
+     No dictionary doesnt allow duplicate keys if we define it again it will take latest key and for this they use hashing technique
+
+Q4.  Can a dictionary have duplicate values? Can different keys
+     hold the same value?
+     Yes dictionay have duplicate values and its also hold the same values
+
+Q5.  How do you access a value in a dictionary? Does it support
+     integer indexing like a list?
+     To access value in dictionary Syntax : dict_name[key]
+     No it doesnt support indexing and slicing
+
+Q6.  What are the three ways to loop through a dictionary?
+     Name the method used for each.
+     1.Loop through key
+     2.Loop through value
+     3.Loop through key-value pair
+     
+dict1={"name":"Akshay","roll_no":100,"weight":65.6,"placement":True}
+
+print("Print all keys","\n")
+for i in dict1.keys():
+    print(i)
+
+print("\n","Print all values","\n")
+for j in dict1.values():
+    print(j)
+
+print("\n","Print both","\n")
+for a,b in dict1.items():
+    print(a,"=",b)
+
+    
+
+Q7.  What does dict.items() return? How is it used in a loop?
+    dict.items() returns key with value
+    For ex;  print("\n","Print both","\n")
+            for a,b in dict1.items():
+                print(a,"=",b)
+
+
+Q8.  What is the difference between looping with
+     'for k in dict' and 'for k in dict.keys()'?
+     There is no difference both loops return keys
+
+Q9.  How does enumerate() work with dictionaries?
+    enumerate() gives us index of key-value pair
+    ex; dict1={"Name":"Gayatri","Age":21}
+        for i,(k,v) in enumerate(dict1.items()):
+            print(i,k,v)
+    
+    output : 
+    0 Name Gayatri
+    1 Age 21
+    {'Name': 'Gayatri', 'Age': 21}
+
+
+Q10. What does it mean that dictionaries are mutable? Give three
+     operations that demonstrate mutability.
+     Dictionaries are mutable means we can change, remove or replace the key-value 
+     Operations that demonstrate mutability:
+     1.update() = used to add new element
+     2.pop() = used  to remove element using key
+     3.popitems() = used to remove last key-value pair of that dictionary
+     4.clear() = used to delete all items from the dictionary
+
+Q11. How do you merge two dictionaries in Python? What happens
+     when both have the same key?
+     To merge the dictionary in python we used '|' this operator
+     If both have same keys they will take latest keys 
+
+Q12. What is aliasing in dictionaries? How does it differ from
+     cloning?
+     Aliasing does both dictionaries stores on same memory location and if any modification is done on that it will affect on eachother
+     and in cloning dictionaries are stores on different memmory location here modifications are not affect on each other
+
+Q13. What does copy() do? How does it differ from simple
+     assignment (dict2 = dict1)?
+     copy() used to create new dictionary object so modifications doesnt affect on eachother
+
+Q14. What does the 'in' operator check in a dictionary —
+     keys or values? How do you check for a value instead?
+     'in' operator is used to check the presence of that element in that dictionary
+     Ex;
+     dict1 = {"name": "Akshay", "roll_no": 100}
+     print("Akshay" in dict1.values())
+
+Q15. What is the difference between the 'is' operator and the
+     '==' operator when used with dictionaries?
+     'is' = used to check both dictionaries are store in same memory address
+     '==' = used to check both dictionaries have same elements
+
+Q16. How do you check if a dictionary is empty?
+    using 'not' operator
+    ex; dict1={}
+        print(not dict1)
+        Output : True
+
+Q17. What do max(), min(), and sum() operate on in a
+     dictionary — keys or values?
+     Keys
+
+Q18. What does sorted() return when applied to a dictionary?
+     Is the result a dictionary or a list?
+     It sorted into ascending order based on keys
+     Result is in a list
+
+Q19. What does reversed() do on a dictionary?
+    reversed() used to reversed a dictionary keys output shows in list data typw
+
+Q20. What is the difference between any() and all() when
+     applied to a dictionary?
+     any() = it returns true when atleast one value is true (o allow)
+     all() = it returns true when all values are true (no 0 allow)
+
+Q21. What does the update() method do? How is it different from
+     adding a key using dict[key] = value?
+     update() method used to add a new key-value in dictionary
+     using update we can add another dictionary also in already exist dictionary 
+
+Q22. What is the difference between pop() and popitem()?
+    pop() = used to delete particular key-value pair
+    popitem() = used to delete last key-value pair of the dictionary
+
+Q23. What error does pop() raise when the key does not exist?
+     How can you avoid it?
+     It give error like KeyError
+     to avoid it we have to make sure that key should be present in the dictionary
+
+Q24. What does popitem() remove — the first pair, last pair,
+     or a random one?
+     last pair, it follow LIFO(last in first out) technique
+
+Q25. What does clear() do to a dictionary? What does the
+     dictionary look like after calling clear()?
+     clear() used to delete all elements from dictionary 
+     It looks like empty dictionary
+
+Q26. What types can be used as dictionary keys? Can a list
+     be used as a key? Why or why not?
+     We can used int,bool,tuple,string
+     No , we cant used list as a key Because dictionary keys must be immutable and hashable
+
+Q27. How do you convert a list of tuples into a dictionary?
+    using dict() keyword
+
+Q28. When you convert a set to a dictionary using a for loop,
+     can you predict the order of keys? Why or why not?
+     No we cant predict the order of keys,because sets are unordered
+
+Q29. What is the difference between a dictionary and a set
+     in Python? (Both use curly brackets — how do you tell
+     them apart?)
+     Set store single value and dictionary store key-value pairs
+
+Q30. What will any() and all() return on an empty dictionary?
+     Explain why.
+     any() returns false
+     all() returns True because in empty dictionary there is no false value
