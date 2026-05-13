@@ -1,0 +1,118 @@
+Q1.  What is a comprehension in Python? What is the main
+     advantage over a traditional for-loop?
+     Comprehension are a readable way to create list,set and dictionary by iterating over a sequence and optionally applying a condition
+     main advantage is we written comprehension in single line 
+
+Q2.  What is the general syntax of a list comprehension?
+     Explain each part: expression, for clause, if condition.
+     syntax : [expression for item in iterable if condition]
+     expression : the expression we want to perform on list
+     for clause : its a iterable sequence using for loop
+     if condition : its optional used when some conditions are apply
+
+Q3.  Is the if condition in a comprehension mandatory?
+     What happens if you leave it out?
+     No,we used only when some condition is given
+     Nothing is happen when we dont used it
+
+Q4.  What is the difference between a list comprehension
+     and a set comprehension?
+     list comprehension used [] brackets and it allow duplication
+     set comprehension used {} brackets and it doesnt allow duplication
+
+Q5.  What is the difference between [ ] and { } in the
+     context of comprehensions?
+     [] used for list and {} used for set & dictionary
+
+Q6.  How do you identify whether a comprehension will produce
+     a list, set, or dictionary just by looking at the syntax?
+     if they used [] its a list and
+     if they used {} with one counter its set and with two counter its dictionary
+
+Q7.  Can we use comprehension to create a tuple? Why or why not?
+    No, we cant used comprehension to create tuple
+    Because when we used it , it creates generator expression not a tuple
+
+Q8.  What is a nested comprehension? Give an example.
+    Nested comprehension means using one loop inside another loop in comprehension
+    for ex ;
+    pairs = [(i, j) for i in range(1, 4) for j in range(1, 4)]
+    print(pairs)
+
+Q9.  Why should you avoid deeply nested comprehensions?
+    Because they become hard to read and understand 
+
+Q10. What does the following code produce — a set or a
+     dictionary? Explain.
+     result = {x for x in range(5)}
+     
+     It produce a set
+
+Q11. What does the following code produce — a set or a
+     dictionary? Explain.
+     result = {x: x**2 for x in range(5)}
+
+     It produce a dictionary
+
+Q12. What is the role of .items() in dictionary comprehension?
+     Why is it needed?
+     .items() used to access the values of keys from dictionary 
+
+Q13. How do you filter key-value pairs in a dictionary
+     comprehension? Give an example.
+
+     using if condition we filter key-value pair
+     for ex;
+     prices = {'apple':30, 'banana':10, 'mango':80, 'grape':120}
+     filtered = {k:v for k,v in prices.items() if v > 50}
+    print(filtered)
+
+
+Q14. How is set comprehension useful for removing duplicates
+     from a sequence?
+
+     Its property that sets are not allow duplication they ignore it using hashing technique
+
+Q15. Does set comprehension guarantee the order of output?
+     Why or why not?
+
+     No, sets are unordered thats why the order of sets output are not guarantee
+
+Q16. What is the difference between the 'is' operator and
+     '==' when comparing comprehension outputs?
+     'is' = operator used to check that both variables locate in same memory location
+     '==' = operator used to check that both variables have same values
+
+Q17. Can you use a function call inside the expression part
+     of a comprehension? Give an example.
+     Yes, we can used function call inside the expression part of a comprehension
+     for ex;
+     words = ['python', 'java', 'c++']
+     upper_words = [word.upper() for word in words]
+     print(upper_words)
+
+
+Q18. What is the output of the following and why?
+     result = [n**2 for n in range(1, 6) if n % 2 != 0]
+
+     Output : 1, 9, 25
+
+Q19. How is dictionary comprehension used to invert a
+     dictionary (swap keys and values)?
+     By just swaping keys and values in comprehension
+     Syntax : {value:key for key,value in dictionary.items()}
+
+
+Q20. A student writes the following to create a list of
+     temperatures in Fahrenheit from a Celsius list using
+     a for-loop. Rewrite it as a list comprehension:
+
+     celsius = [0, 20, 37, 100]
+
+     fahrenheit = []
+     for c in celsius:
+         fahrenheit.append((c * 9/5) + 32)
+
+    list1=[((c * 9/5) + 32) for c in celsius]
+
+    

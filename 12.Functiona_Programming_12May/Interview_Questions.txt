@@ -1,0 +1,179 @@
+Q1.  What is a lambda function in Python? How is it different
+     from a regular function defined with def?
+
+     lambda function is ananomous function in Python
+     It written in single line code and regular def function written in more than 1 line
+
+Q2.  What are the three key properties of a lambda function?
+    (1). ananomous
+    (2). Autoreturn the result
+    (3). Single line expression , no multiline logic allow
+
+Q3.  Can a lambda function have multiple statements or
+     multiple lines of code? Why or why not?
+
+     No, lambda function have only single line statement it returns in single line and for quick testing
+
+Q4.  Does a lambda function need an explicit return statement?
+     Explain.
+     No, it doesnt need explicit return statement by its property it is Autoreturn
+
+Q5.  How do you write an if-else condition inside a lambda
+     function? Give an example.
+
+     for ex ;
+     even_odd=(lambda n:"even" if n%2==0  else "odd")
+     print(even_odd(5))
+     print(even_odd(8))
+
+
+Q6.  What is the map() function? What does it return?
+    map() function applies function on each element of iterables(list,tuple,range,dict,set)
+    It returns same number of output as a given input
+
+Q7.  Why do we need to wrap map() inside list() to see the
+     output as a list?
+     Because it gives object means it returns mem location of map so we need to convert it into list
+
+Q8.  What is the difference between map() and a for-loop?
+     When would you prefer map()?
+
+     map() gives number of output equal as a number of input and it logic is easier
+     when we used for loop it gives only filter result and logic is complex here 
+     i would prefer map() for simple logic and for loop for complex logic
+
+Q9.  How many elements does map() return compared to the
+     input iterable? Explain with an example.
+
+     It returns equal number of elements as a input iterable
+     For ex;
+     names = ['alice', 'bob', 'carol']
+     first=map(lambda n:n.capitalize(),names)
+     print(list(first))
+
+
+Q10. What is the filter() function? How does it differ
+     from map()?
+
+     filter() is used to filter out the input according to condition it gives result on only elements where condition is true 
+     map() returns same number of output as a input iterable it doesnt filter out
+
+Q11. What is the key difference between map() and filter()
+     in terms of input count vs output count?
+
+     map() returns same number of output as a input iterable it doesnt filter out
+     filter() returns filterd data it gives result on only elements where condition becomes true
+
+Q12. What should the function passed to filter() always
+     return? What happens if it returns something other
+     than True or False?
+
+    It returns True when condition is true and keep only those elements and discard False elements
+    If it returns other than True and False python automatically converts the return value into boolean using truthy and falsy rules
+
+
+Q13. What happens when you pass None as the function
+     argument to filter()?
+
+     It returns Only True values and discard that None 
+
+Q14. What is the reduce() function? Which module must
+     you import it from?
+
+     reduce() function applies on every element of iterable in loop
+     we import reduce from functools
+
+Q15. Why was reduce() moved out of Python built-ins and
+     into the functools module in Python 3?
+
+     reduce() was moved from Python built in to the Python functools because,
+     it was less readable and less commonly used like map() and filter()
+
+
+Q16. Explain step by step how reduce() works on the list
+     [1, 2, 3, 4, 5] with addition.
+
+     step 1 : 1    = 1
+     step 2 : 1+2 = 3
+     step 3 : 3+3 = 6
+     step 4 : 6+4 = 10
+     step 5 : 10+5 = 15
+
+Q17. What is the difference between map(), filter(), and
+     reduce() in terms of what they return?
+     (map → ? | filter → ? | reduce → ?)
+
+     map     -> returns the same number of output as equal to input iterable
+     filter  -> returns the filtered data only if condition is true 
+     reduce  -> returns the single commulative value after looping on every element of iterable
+
+Q18. Can reduce() work on an empty list? What happens?
+     How can you handle this?
+
+     No it gives Error like - TypeError: reduce() of empty iterable with no initial value
+     To handle it we have to provide some value as a third argument
+     for ex;
+     nums = []
+     result = reduce(lambda x, y: x + y, nums, 0) ---> here we give third argument is 0
+     print(result) # Output : 0
+
+Q19. What is an initializer in reduce()? When would you
+     use it?
+
+    initializer in reduce() is the optional third argument that provides the starting value for the reduction operation
+    syntax : reduce(function, iterable, initializer)
+
+
+Q20. How would you find the maximum value in a list using
+     reduce() without using max()?
+
+     Using Comparision 
+     for ex;
+     maximum=reduce(lambda a,b : a if a>b else b)
+
+Q21. Give a real-world example where you would chain
+     filter() and map() together.
+
+    For ex;
+    scores = [42, 78, 55, 33, 91, 47, 60]
+    filter1=filter(lambda i:i>50,scores)
+    map1=map(lambda i:i+5,filter1)
+    print(list(map1))
+
+
+Q22. What is functional programming? How do lambda, map,
+     filter, and reduce relate to it?
+
+     Functional programming means we have some built in functions in python they actually stores their own logic
+     Functional programming is a programming style where functions are treated as main building blocks, and data is processed without changing it directly.
+
+    lambda → creates small anonymous functions
+    map() → applies a function to all elements
+    filter() → selects elements based on a condition
+    reduce() → combines all elements into one result
+
+Q23. Can map() accept more than one iterable? Give an
+     example showing map() with two lists.
+
+     Yes , it accepts more than one iterable
+     for ex;
+     result = list(map(lambda x, y: x + y,[1, 2, 3], [10, 20, 30]))
+     print(result)
+
+Q24. What is the difference between map() and a list
+     comprehension? When would you use one over the other?
+
+     map() used to applies function on all elements and list comprehension used when we want more readability and conditions
+
+
+Q25. Write the reduce() equivalent of the following
+     using only a for-loop:
+     from functools import reduce
+     result = reduce(lambda a, b: a * b, [1, 2, 3, 4, 5])
+
+     nums=[1,2,3,4,5]
+     result=1
+     for i nums:
+         result=result*1
+     print(result)
+
