@@ -1,0 +1,188 @@
+Q1.  Write out the LEGB rule in full. What does each
+     letter stand for? In what order does Python search
+     each level?
+
+    LEGB - is a namspace declaration rule in python.
+
+     L - local
+     E - enclosing
+     G - global
+     B - built-in
+
+
+Q2.  What is the enclosing (E) namespace? Give a clear
+     example showing a variable in the enclosing scope.
+
+     enclosing(E) namespace is declare inside outer function and accessable inside that function and there nested functions
+     ex ; 
+     def outer():
+        y = 3       # enclosing 
+        def inner():
+            z=8     # local
+            print(x,y) 
+        def inner()
+
+Q3.  What is the difference between the local namespace
+     and the enclosing namespace?
+
+     local name space declare inside the inner function and accessable only in that function 
+     enclosing function is declare inside outer function and accessable inside that function and there nested functions
+
+Q4.  Can an inner function read a variable from the
+     enclosing function without any keyword?
+     Can it MODIFY that variable? What keyword is needed
+     to modify an enclosing variable?
+
+     Yes, it can read wihtout any keyword
+     No , we cant modift it directly we need to used keyword nonlocal for modify
+     ex;
+     def outer():
+        count=0
+        def inner():
+            #count +=1   --> we cant modify directly it gives unbound error
+            nonlocal count
+            count +=1
+        inner()
+     outer()
+
+Q5.  What is the nonlocal keyword? How is it different
+     from the global keyword?
+
+     nonlocal keyword allows a nested function to modify a var in its parent function or inner function without creating new local var
+     global keyword allows to modify a var which is declare top of the script or file
+
+Q6.  What is the built-in namespace? Give five examples
+     of names that live in the built-in namespace.
+
+     built-in namspace means built-in functions which are already in python system
+     ex; len(),print(),input(),id(),type()
+
+Q7.  In the payroll example (10.py), identify which LEGB
+     level each of these belongs to inside compute_pay():
+     regular, overtime_rate, base_wage, hours, min, max
+
+     L = regular, overtime_rate
+     E = hours
+     G = base_wage
+     B = min , max
+
+Q8.  What happens when the same variable name exists at
+     multiple LEGB levels? Which one does Python use?
+
+     python used the Global variable if that same variable doesnt declare inside the function
+     otherwise it will take enlcosing or local variable
+
+Q9.  In 11.py, outer has score = 45 and inner has
+     score = 90. Are these the same object?
+     How do you prove they are different?
+
+     no there names are same but they are different
+     using type() built-in function we find the mem address and by that we can prove both are diff variables
+
+Q10. Can you call an inner function from outside its
+     enclosing function? What error occurs if you try?
+
+     No, we cant call an inner function from outside its enclosing function
+     It raised NameError like that name is not defined
+
+Q11. What does locals() return inside an inner function?
+     Does it include variables from the enclosing scope?
+
+     locals() returns dict containing all var that are inside the inner function only
+     Yes we can include enclosing scope variables, if we refered them inside the inner function they will take that otherwise ignored them
+
+Q12. What does globals() return from inside a deeply
+     nested inner function?
+
+    inside inner function globals() return dict containing all variables defined on top of the file or script
+
+
+------ >   Q13. In 9.py, the inner_fn uses the name len. At which
+     LEGB level is len found? What would happen if you
+     defined a local variable named len inside inner_fn?
+
+     length found at level 4th level which is built-in ( B )
+    
+
+Q14. Explain the LEGB lookup trace for the following
+     names accessed inside inner_fn of 9.py:
+     district, city, country, print, len
+
+    L = district
+    E = city
+    G = country
+    B = len()
+
+
+Q15. What is the difference between shadowing in a
+     regular function vs shadowing in a nested function?
+
+     shadowing inside the normal function, var inside function hides the global var
+     shadowing inside the nested function, inner function hides the var of the outer function (enclosing var)
+
+
+
+Q16. What error is raised when an inner function tries
+     to do enclosing_var += 1 without the nonlocal keyword?
+     Why does this happen?
+
+     it will raised UnboundLocalError 
+     for ex;
+     def outer():
+        count = 0
+        def inner():
+            count += 1
+            print(count)
+        inner()
+    outer()
+
+    it raised error because,python assume that count is local var inside the inner() bcoz it assigns value,
+    but before assigning python try to read its old value
+
+
+
+Q17. In the payroll example, hours is a parameter of the
+     outer function payroll(). What LEGB level does it
+     belong to when accessed inside compute_pay()?
+
+    Its level is 2nd (E) enclosing
+
+Q18. Can globals() be called from inside a deeply nested
+     inner function? Will it return the module-level
+     globals or something else?
+
+     yes, globals() can be called from inside a deeply nested inner function
+     It always returns the module-level global variables, not the local variables of outer or inner functions
+
+
+
+Q19. What is the practical use of the enclosing scope?
+     Give a real-world example where an inner function
+     reading from enclosing scope is useful.
+
+     enclosing scope useful when inner function needs to use data from the outer function without passing it multiple times
+     ex;
+     def login_system():
+        attempts = 0
+        
+        def login():
+            nonlocal attempts
+            attempts+=1
+            print("Login attempts : ",attempts)
+        return login
+     user1=login_system
+     user1()
+     user1()
+
+
+
+
+Q20. Summarise the four LEGB namespaces in one sentence
+     each, covering: what it contains, when it is created,
+     and when it is destroyed.
+
+     Local ( L ) : Contians var inside the current or inner function, created when function starts and destoryed when function ends
+     Enclosing ( E ) : Contains var inside the outer function , created when the outer function runs and destroyed when the outer and inner function ends
+     Global ( G ) : Contains var define at top of the file/script , created when programs starts and destroyed when program ends
+     Built-in ( B ) : Contains python predefined names or built in functions ,created when python starts and end when python stops
+

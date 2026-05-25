@@ -1,0 +1,192 @@
+Q1.  What is an exception in Python? How is it different from
+     a syntax error?
+
+     exception is unexpected error in python '
+     syntax error means rules of writing any code and exception means it raised unexpected errors
+
+Q2.  What are the four blocks in Python exception handling?
+     When does each block execute?
+
+     try,except,else,finally are four blocks in exception handling
+     syntax:
+     try:
+        risky code
+     except:
+        exception type to handel error
+     else:
+        if no error then run this
+     finally:
+        always run
+
+
+Q3.  Does the finally block always execute? Give an example
+     where it runs even when an exception is raised.
+
+     Yes finally block is always execute
+     for example;
+     a=int(input("Enter Numerator: "))
+     b=int(input("Enter Denominator: "))
+
+    def divide(a,b):
+        return a/b
+
+    try:
+        #print(divide(10/2))
+        print(divide(a,b))
+    except ZeroDivisionError as err:
+        if b <=0:
+             print("ZeroDivisionError : ",err)
+         else:
+             print(divide(a,b))
+    finally:
+        print("Division Done")
+
+    Output : - ZeroDivisionError :  division by zero
+               Division Done
+
+Q4.  When does the else block in try/except execute?
+     What is its purpose?
+
+     When their is no error then else block is execute
+     Purpose is when out code run efficiently in try block then it doesnt check exception it directly comes into the else block 
+
+Q5.  What is ZeroDivisionError? Name two operations that
+     can trigger it (not just division).
+
+     ZeroDivisionError occurs when we try to divide by 0 and module by 0
+
+
+Q6.  Do Python integers overflow? What about floats?
+     What is the maximum float value approximately?
+
+     No in python integers have flexible size but float do overflow error bcoz it have fixed size
+     maximum float value apporximately is calculated by sys.float_info.max by import sys 
+     value : 1.7976931348623157e+308
+
+Q7.  What is OverflowError? Which module and function
+     commonly triggers it?
+
+     OverflowError occurs when we try to access unlimited float value for ex; exp(1000)
+     for this we used sys module with max() function for trigger
+
+Q8.  How can you handle large numbers in Python without
+     risking OverflowError?
+
+    Using integer datatype 
+
+Q9.  What is the difference between TypeError and ValueError?
+     Give one example of each.
+
+     TypeError occurs when we used correct type for invalid methods
+     ex; int()+str()
+     ValueError occurs when we used correct method but invalid value
+     ex; int('eighty')
+
+
+Q10. What does TypeError: can only concatenate str (not "int")
+     to str mean? How do you fix it?
+
+     It means we cant merge str with int data type
+     to fix it we have to convert that int into string using str()
+
+Q11. What does ValueError: invalid literal for int() with
+     base 10 mean? When does it occur?
+
+     It means we entered value is not integer but we used integer method
+     to fix this we have to convert that value into integer
+
+Q12. What is NameError? What are three common causes?
+    NameError occurs variable or function is used without declaring it 
+    three common causes are case-sesitive,variable name undeclared, function undeclared
+
+Q13. Is Python case-sensitive for variable names?
+     Give an example showing the difference.
+
+     Yes python is case-sensitive for variable names
+     for ex;
+     try:
+        name="Gayatri"
+        print("Name")
+    except NameError as err:
+        print("NameError: ",err)
+
+    Output : - it gives python is case sensitive because we declare variable as a 'name' but access 'Name'
+
+Q14. What is UnboundLocalError? How is it different from
+     NameError?
+
+
+
+Q15. Why does counter += 1 inside a function cause
+     UnboundLocalError even when counter exists as a global?
+     Explain Python's compilation step.
+
+Q16. What is the global keyword? When should you use it?
+     What is a better alternative?
+
+Q17. What is Python's LEGB rule? Write out what each
+     letter stands for.
+
+Q18. What does isinstance() do? How is it useful in
+     preventing TypeError?
+
+     isinstance() is content test method in python used to check value with data type 
+     syntax : isinstance(value,(data_type1,data_type2))
+
+Q19. How would you safely convert user input (always a string)
+     to an integer? Which exception must you handle?
+
+     using int() built in function we convert string into integer
+     ValueError exception we have to handle
+
+Q20. What is the difference between catching a broad
+     Exception vs a specific exception like ValueError?
+     Which is better practice and why?
+
+     specific(ValueError) : catches only the mistakes you expect
+     broad(Exception) : catches every mistakes,even hidden bugs also
+
+     Specific is always better than broad
+     Bcoz here procedure is very simple unexpected code errors crash so we can fix them using exception handling and also saves time
+
+Q21. Can you catch multiple exception types in a single
+     except line? Show the syntax.
+
+     Yes, we can catch multiple exception in a single except line
+
+     Syntax:
+     try:
+        risky code
+     except(ValueError,ZeroDivisionError):
+        print("............")
+    
+     Example :
+     try:
+        result = 100 / int(input("Enter a number: "))
+     except (ValueError, ZeroDivisionError):
+        print("Invalid input! Please enter a number greater than zero.")
+
+Q22. What is ArithmeticError? What are its two subclasses
+     covered in Part 1?
+     Arithmetic Errors occurs when unexpected operations perform on numerics
+     1.ZeroDivisionError 
+     2.OverflowError
+
+Q23. What does math.isinf() check? When would you use it?
+    math.isinf() checks if a floating-point number is positive or negative infinity
+     to prevent maths (numeric) errors 
+     example;
+     import math
+
+     print(math.isinf(float(inf)))
+     print(math.isinf(float(-inf)))
+
+     print(math.isinf(42.0))
+
+
+Q24. What is the decimal module used for? How does it
+     help with OverflowError?
+
+Q25. What is the best practice for writing imports in Python?
+     Which error can occur if you use a function before
+     importing its module?
