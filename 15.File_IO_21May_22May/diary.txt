@@ -1,0 +1,4 @@
+Day 3 - Tuple
+Day 4 - Set
+Day 5 - Dictionary
+Day 6 - filter,map,reduce

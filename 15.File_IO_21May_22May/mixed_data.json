@@ -1,0 +1,1 @@
+{"dict": {"name": "Akshay", "age": 21}, "list": [10, 20, 30], "tuple": [1, 2, 3], "string": "Hello", "int": 100, "float": 99.5, "true_value": true, "false_value": false, "none_value": null}

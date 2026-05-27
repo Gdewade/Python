@@ -1,0 +1,3 @@
+Task 1: Study Python
+Task 2: Practice Programs
+Task 3: Revise Notes

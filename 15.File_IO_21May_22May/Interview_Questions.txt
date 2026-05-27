@@ -1,0 +1,363 @@
+------------------ 21 May---------------------------
+
+
+Q1.  What is File I/O in Python? Why do we need it?
+    File I/O is used to perform some task on file like reading data from files and writing data to files 
+    we need it for large data handling and storage purpose
+    
+
+Q2.  What is the syntax of the open() function?
+     What are its two main arguments?
+
+     syntax: open("Filename","mode")
+
+Q3.  List all the file opening modes in Python and
+     explain what each one does:
+     "r", "w", "a", "r+", "w+", "a+"
+
+     r = opens file for reading only
+     w = opens file for writing only
+     a = opens file for appending only
+     r+ = opens file for both reading and writing 
+     w+ = opens file for both writing and reading
+     a+ = opens file for both appending and reading
+
+
+
+Q4.  What is the default mode of open() if no mode
+     is specified?
+
+     r - read only is default mode of open 
+
+Q5.  Explain the three steps of how File I/O works
+     internally in Python (memory buffer explanation).
+
+     open() - open or create file / create connection and buffer
+     read() / write() - store the temproray data in RAM buffer
+     close() - store the data permanently to disk
+
+Q6.  What does open() return? What do we call this
+     returned object?
+
+     open() returns file object to perform operations read(),write(),close()
+
+Q7.  Why is it important to call close() after
+     file operations? What happens if you don't?
+
+     to stored data permanently on disk we need to call close(), if we dont used close() the content of that file is not visible
+
+Q8.  What happens to the file object after close()
+     is called? Can you use it again?
+
+     after close that file object it stored that data permanently on disk
+     and clears buffer memory
+
+Q9.  What is the difference between write() and
+     writelines()?
+
+     write() - used to write single string (String)
+     writelines() - used to write multiple string (list,tuple)
+
+Q10. What does write() return? Does it add a newline
+     automatically?
+
+     No it doesnt add new line automatically it returns continous stream of string
+
+Q11. What is the difference between read(), read(n),
+     readline(), and readlines()?
+
+     read() - used to read entire content
+     read(n) - used to read n line
+     readline() - used to read entire content including \n in list
+     readlines() - used to read enitre content excluding \n in list
+
+Q12. What data type does readlines() return?
+     What does each element in the result contain?
+
+     readlines() - returns in list 
+     each element in the result contain string
+
+Q13. What is the difference between readline() and
+     readlines()?
+
+    readline() - used to read entire content including \n in list
+     readlines() - used to read enitre content excluding \n in list
+
+
+Q14. What happens when you open a file in "w" mode
+     that already exists with content?
+
+     It replace old content with new one
+
+Q15. What is the difference between "w" mode and
+     "a" mode?
+
+     'w' and 'a' both used for writing data
+     w -  used to write a data in the beggining
+     a - used to add or write a data later
+
+Q16. What error is raised when you try to open a file
+     in "r" mode that does not exist?
+
+     FileNotFoundError is raised
+
+Q17. What is the with statement in file I/O?
+     What is its advantage over manually calling close()?
+
+     with statement is used to open file safely and auto manage closing the file
+     Advantages : auto closing file, safe if error occurs, shorter coded
+
+Q18. When using the with statement, do you need to
+     call close() explicitly? Why not?
+
+     with statement is used to open file safely and auto manage closing the file
+     doesnt need to call close() explicitly
+
+Q19. What happens when you call write() twice on the
+     same file object without closing it?
+     For example:
+     fobj.write("Hello")
+     fobj.write("World")
+     What is written to the file?
+
+     output : HelloWorld 
+     it returns that data nearest old data
+
+Q20. What is the difference between reading a file
+     with read() vs iterating over the file object
+     with a for loop?
+
+     read() - direclty read entire data at once
+     for loop() - read data according to condition
+
+Q21. In write_operation.py, the file is opened twice
+     in "w" mode. What is the final content of the
+     file? Explain why.
+
+    final content : hello india
+    because when we call write mode again on same file it will replace old data with new
+
+
+Q22. How do you write a list of strings to a file,
+     one item per line?
+
+     using write() we need for loop for list
+     thats why writelines() is used
+
+Q23. What is a FileNotFoundError? When does it occur
+     and how do you handle it?
+
+     FileNotFoundError occurs when file is not present or exist three
+     To handle it either used exception handling or give the file name which is exist there
+
+Q24. What is the difference between "r+" and "w+" mode?
+
+    r+ - used for both read and write operations on existing files only
+    w+ - used for both write and read operations ,creates files if it doesnt exist
+
+Q25. Why should close() always be called after file
+     operations are complete, and how does the with
+     statement ensure this automatically?
+
+     close() is needed because to save data permanently on disk and avoid corruption
+     with statement ensures close() is called auto,even if errors occur
+
+
+
+------------------ 22 May---------------------------
+
+Q1.  What is the with statement in Python file I/O?
+     What problem does it solve compared to manually
+     calling close()?
+
+     with statement is used to open files in various modes
+     is is more secured and not needed to close() it , it closes automatically
+
+Q2.  What is a context manager in Python?
+     How does with act as a context manager for files?
+
+     a context manager is an object that automatically manages resources like files,database connections and locks
+     'with' act as a context manager like,
+      1. Opens the file
+      2. Give access to the file object
+      3. automatically closes the file after the block ends
+
+
+
+Q3.  Does the with statement call close() automatically?
+     When exactly is the file closed?
+
+     Yes,it call close() automatically after the block ends
+
+Q4.  What happens if you try to use the file object
+     after the with block has ended?
+
+     it raised ValueError because operations cant perform on closed files
+     
+
+Q5.  What is the difference between "w" and "a" mode
+     when using the with statement?
+
+     when we want to add new content in file we used 'a' and at starting of creation the file we used 'w'
+     Because 'w' removes old content if we used it for add new content
+
+Q6.  If you open the same file in "w" mode twice in
+     two separate with blocks, what happens to the
+     original content each time?
+
+     Python remove all existing content of the file before writing new data
+
+
+Q7.  What is JSON? What does JSON stand for?
+
+     JSON is a lightweight format used to store and exchange data between programs,
+     applications and servers
+     JSON stands for JavaScript Object Notation 
+
+
+
+Q8.  What is serialization in Python?
+     Give a real-world example of why it is needed.
+
+     serialization means convert python object (str,int,null,none,float,boolean,list,array,dict)
+     into JSON format
+     Real-world used : saving game progress,storing user settings,sending data through API
+
+
+Q9.  What is deserialization in Python?
+     How is it the reverse of serialization?
+
+     deserialization means convert JSON format into python object
+     Using json.load(obj) method reverse the serialization
+
+Q10. What is the difference between json.dump()
+     and json.dumps()?
+
+     json.dump() used to convert python obj into json format
+     json.dumps() used to convert python obj into string format
+
+Q11. What is the difference between json.load()
+     and json.loads()?
+
+     json.load() is read json data from file
+     json.loads() is read json data from string
+
+
+Q12. What Python data types can be serialized to JSON?
+     List the Python → JSON type mappings.
+
+     Python - > JSON
+     dict   - > object {}
+     list   - > array []
+     tuple  - > array[]
+     str    - > string ""
+     int    - > number
+     float  - > number
+     True   - > true
+     False  - > false
+     None   -> null
+
+Q13. What does a Python tuple become when serialized
+     to JSON using json.dump()?
+     What type do you get back when you load it?
+
+     It becomes list [] and we also get type list
+     
+Q14. What does a Python None value become in JSON?
+     What does True / False become?
+
+     Null value becomes null in JSON
+     True become true
+     False becom  false
+
+
+Q15. In list_serialization.py, why does json.load()
+     fail immediately after json.dump() in the same
+     with block? How do you fix this?
+
+     Because we used 'w+' mode which means both write and read
+     But when we run json.dump() cursor is goes to end of the file
+     so json.load() is unable to read it from starting
+     so we used obj.seek(0) to move cursor to the beginning
+
+Q16. What does fobj.seek(0) do? Why is it needed
+     when you want to read a file after writing to it
+     in the same open session?
+
+     Because we used 'w+' mode which means both write and read
+     But when we run json.dump() cursor is goes to end of the file
+     so json.load() is unable to read it from starting
+     so we used obj.seek(0) to move cursor to the beginning
+
+
+Q17. What is the difference between "w" mode and
+     "w+" mode when used with JSON operations?
+
+     'w' - used to writing only
+     'w+' - used for both write and read
+
+Q18. Why is json.dump() better than fobj.write(str(data))
+     for saving Python data structures to files?
+     
+     because it saves the data into proper JSON format which is standardized ,portable
+     and wasy to read back
+
+
+Q19. What does the indent parameter in json.dump() do?
+     When would you use it?
+
+     indent parameter used for formating the JSON data with spaces and new lines
+     making it easier for read
+
+Q20. Write the complete steps to save a Python list
+     to a JSON file and load it back. What imports
+     are needed?
+
+     Step 1 : Import json module
+               import json
+     Step 2 : create python list
+               nums = [1,2,3]
+     Step 3 : save the list to a JSON file
+               with open("file_name.json",'w') as file_obj:
+                    json.dump(list_name,file_obj)
+     Step 4 : load list back to JSON file
+               with open("file_name.json",'w') as file_obj:
+                    json.load(file_obj)
+
+
+Q21. What error is raised if you try to json.load()
+     a file that contains invalid JSON?
+
+     It raised json.JSONDecoderError error
+
+
+Q22. What error is raised if you try to json.load()
+     a file opened in "w" mode only (not readable)?
+
+     It reaised io.UnsupportedOperation: not readable error
+
+Q23. Can you append to a JSON file the same way you
+     append text to a .txt file using "a" mode?
+     Why or why not? What is the correct approach?
+
+     No, we cant direclty append because JSON store element in proper strucutre we if try to add it will be invalid
+     so for append
+     1. read it using json.load()
+     2. now append like list_name.append(40)
+     3. now check modifications using w mode with json.dump()
+
+
+Q24. What is the difference between the with statement
+     approach and the try/finally approach for
+     ensuring a file is always closed?
+
+     Both used to ensure that file is closed
+     but with done it automatically
+     and using try/finally we have to close it in finally block 
+     otherwised its not closed automatically
+
+
+Q25. When would you choose to use JSON files over
+     plain text files to store data in Python?
+
+     When data is very large and we want it in more stuctured format

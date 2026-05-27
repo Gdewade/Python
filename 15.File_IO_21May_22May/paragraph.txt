@@ -1,0 +1,1 @@
+This program first takes 5 student names from the user one by one and stores them in a list. Then it opens students.txt file in write mode and writes each student name on a separate line using write().
