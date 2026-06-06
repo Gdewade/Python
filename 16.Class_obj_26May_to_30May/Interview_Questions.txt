@@ -1,0 +1,559 @@
+-------------------- 26 May ---------------------
+
+Q1.  What is Object-Oriented Programming (OOP)?
+     How is it different from Procedural Programming?
+
+     OOP is a program which ogranize the code with classes and objects
+     In procedural Programming line by line execution is there and in OOP execution is done when object of that class is created
+     In procedural proramming we can used only builtin types and in OOP we can create it by our own
+
+Q2.  List all 6 principles of OOP.
+
+    1. Class and object
+    2. Encapsulation
+    3. Inheritance
+    4. Abstraction
+    5. Polynorphism
+    6. Message Passing
+
+Q3.  What is a class in Python? Define it in one sentence
+     using the word "blueprint."
+
+     Class is a blueprint of objects by defining their attributes and methods
+
+Q4.  What is an object in Python? What is another word
+     for object?
+
+     Object is a block which represent an entity containing attributes and methods
+     Object is instance of the class
+
+Q5.  What is the syntax to define a class in Python?
+     What keyword is used?
+
+     class class_name:
+        # attributes
+        # methods
+
+Q6.  What is the syntax to create an object from a class?
+
+    obj_name = class_name()
+
+Q7.  What is the difference between a class and an object?
+     Use the Cars example from your notes.
+
+     class is a container or blueprint of the object behavior
+     object is a instance of the class
+     ex;
+     class Car:                         # Class
+        def __init__ (self):            # Attributes
+            self.color="red"
+            self.name="BMW"
+        def display(self):              # Method
+            print(self.color,self.name)
+
+     c1=Car()                           # Object
+     c1.display()
+
+
+Q8.  What does a class contain? Name the two things.
+
+     class contains attributes and methods
+
+Q9.  What is the __init__ method? When is it called?
+
+    __init__ is a constructor used for storing attributes
+
+Q10. What is self in Python? Why is it needed as the
+     first parameter in every method?
+
+     self is used for object reference 
+     Because every object goes to the self for reference then execute methods
+
+Q11. What is an attribute? How do you define and access
+     an instance attribute?
+
+     attribute is nothing but data or properties 
+     it define using __init__ constructor with self obj refernce
+     to access them we used object
+
+Q12. What is a method? How is it different from a
+     regular function?
+
+     methods is a behvior or function of the class define for object
+     regular function call directly and methods are define inside class and call after object created
+
+Q13. Can you create multiple objects from the same class?
+     Do they share the same attribute values?
+
+     Yes, we can create multiple object of same class
+     If we already define that value they will show same otherwise attribute values are different
+
+Q14. In Python, "everything is an object." What does
+     this mean? Give three examples using built-in types.
+
+     "Everthing is an object" means the variable we creates for operations are object of built-in type class
+     ex;
+     list1=list()
+     type(list1)
+
+     str1=str()
+     typr(str1)
+
+     int1=int()
+     type(int1)
+
+Q15. What error occurs when you call a method on an
+     object that does not have that method?
+     For example: nums = [10,20,30]; nums.upper()
+
+     AttributeError occurs because upper() is not method of list class
+
+Q16. What is the difference between built-in types
+     (int, str, list) and custom types (user-defined
+     classes) in Python?
+
+     built-in types are already define in python and custom types are design by user
+
+Q17. Give two real-world examples of a class and name
+     two objects for each class.
+
+     ex;
+     class Car:                         # Class
+        def __init__ (self):            # Attributes
+            self.color="red"
+            self.name="BMW"
+        def display(self):              # Method
+            print(self.color,self.name)
+
+     c1=Car()                           # Object
+     c1.display()
+
+     c2=Car()
+     c2.display()
+
+
+Q18. What advantage does OOP have over Procedural
+     Programming for large applications?
+
+     It works on complex applications using our own custom data type according to need
+
+Q19. How do you access an attribute of an object?
+     How do you change its value after creation?
+
+     To access an attribute of an object : obj_name.attribute
+     To change value after creation : obj_name.attribute = value
+
+Q20. What is the relationship between a class and a
+     custom data type in Python?
+
+     class in python used to create custom data types
+     ex;
+     built-in type : int and objects are 10,20 or n1,n2
+     custom type : Student and objects are s1,s2
+
+
+
+-------------------- 27 May ---------------------
+
+
+
+Q1.  What are the two components of a class in Python?
+     Explain each with a real-world example.
+
+     Attributes and Methods are two components of a class in python
+     ex;
+     class Car:                         # Class
+        def __init__ (self):            # Attributes
+            self.color="red"
+            self.name="BMW"
+        def display(self):              # Method
+            print(self.color,self.name)
+
+     c1=Car()                           # Object
+     c1.display()
+
+
+Q2.  What is an attribute? What is a method?
+     What is the difference between them?
+
+     Attributes are a data or properties of a class
+     Method are a functions or behavior of a object that define inside the class
+
+Q3.  What is the class naming convention in Python?
+     What is it called and what rule does it follow?
+
+     Class naming convention : class name follows pascal case
+     It called pascal case and it follows 1st letter of class_name should be capital
+
+Q4.  Convert "bank_atm" to the correct class name.
+     What is the difference between snake_case and
+     PascalCase? Which is used for classes?
+
+     correct : BankATM
+     snake_case : used for function and variable name convention where undersocre and lower class letters are allow 
+     pascal_case : used for class naming convention where 1st letter of class_name should be Capital
+
+Q5.  What is the difference between __init__(self) and
+     __init__(self, colour, top_speed, mileage)?
+     When would you use each?
+
+     __init__(self) : here we didnt stored our attributes we directly take attributes with values
+     __init__(self,color,top_speed,mileage) : here we stored attributes and take there reference outside the class for values
+
+Q6.  How do you access an attribute of an object?
+     How do you call a method on an object?
+     What symbol is used for both?
+
+     To access attibute of object : obj_name.attibute
+     To call method of an object : obj_name.method()
+     used '.' symbol used for both
+
+
+Q7.  If you create two objects from the same class and
+     change an attribute on object1, does object2
+     change? Why or why not?
+
+     No it doesnt affect on obj2 because objects are independent 
+
+Q8.  How many times does __init__ run if you create
+     3 objects from the same class?
+
+     it runs 3 times
+
+Q9.  What is the difference between a custom class
+     (like Vehicle) and a built-in class (like list)?
+     How is object creation the same for both?
+
+     custom class is user defined class where we can create class according to our need
+     buitl-in class are already define in python 
+
+Q10. In class0.py, why does "System ready!" print twice
+     when m1 = BankATM() and m2 = BankATM() are created?
+
+     Because __init__ is runs every time for object
+     there are 2 objects so they run twice
+
+Q11. What does self.account_bal -= amt do in the
+     do_withdraw method of BankATM? What is the
+     balance check (amt <= self.account_bal) protecting?
+
+     it subtract the amt from balance amt and then check the sufficeint balance is available for do_withdraw 
+
+Q12. Why is self needed as the first parameter in every
+     method? What does it refer to?
+
+     For obj reference inside the class for attributes it needed as a first parameter in every method
+
+Q13. How does Python's list class relate to the concept
+     of a custom class? What does list1.append(10) prove
+     about list being a class?
+
+     Python's built-in list works exactly like a custom class created by a programmer
+     list1 is object and append is a method of list 
+     append() is used to add element in list
+
+
+Q14. What is the difference between class2.py and
+     class3.py in terms of how attribute values are
+     provided to the object?
+
+     in class2.py we give values of attributes directly at the time of object creation
+     and in class3.py we take values of attributes from user using input() built in function
+
+Q15. In the BankATM project (class.py), why does
+     __init__ call self.show_menu() at the end?
+     What is the benefit of this design?
+
+     to call automatically after __init__ method is call self.show_menu() is mentioned
+
+
+
+-------------------- 28 May ---------------------
+
+
+
+Q1.  What is the difference between a method and a
+     function in Python? Give 5 points of comparison.
+
+     Method -  1. Method is declare inside the class
+               2. Method is call using object
+               3. Syntax : obj_name.method()
+               4. Ex; appned(),insert()
+               5. self is exist here for current object reference
+
+     function -     1. Fucntion is declare outside the class
+                    2. Function is call directly
+                    3. Syntax : function_name()
+                    4. Ex; len(),type(),id(),min()
+                    5. self doesnt exist here
+
+Q2.  How do you call a method? How do you call a function?
+     Show the syntax difference.
+
+     Syntax :
+     1. method call : obj_name.method_name()
+     2. function call : function_name()
+
+Q3.  Give 3 examples of methods and 3 examples of
+     functions from Python's built-in tools.
+
+     Examples :
+     1. methods : append(),insert(),pop(),remove(),add()
+     2. functions : min(),max(),id(),type(),sorted()
+
+Q4.  What is the constructor in Python?
+     What is its special name?
+
+     constructor is a method which call automatically when object is created and executed
+     special name is __init__
+
+Q5.  What is the "superpower" of the constructor
+     (__init__)? Why is it special compared to other
+     methods?
+
+     superpower of constructor(__init__) : it runs automatically when object is created
+     other methods we have to runs manually and constructor call runs automatically
+
+Q6.  What is the difference between the constructor
+     (__init__) and a normal method in terms of:
+     i)  When it is called - constructor call when obj is created and normal methods call manually by user
+     ii) How it is called - constructor call when obj created and normal method call using obj_name.method_name()
+     iii) User control - constructor doesnt control by user but normal method control by user
+
+
+Q7.  What type of code should go inside the constructor?
+     Give two real-world examples.
+
+     Like methods,DataBaseConnections,Application and API setup
+     class Methods:
+          def __init__(self):
+               self.DataBaseConnections()
+
+Q8.  Can you have more than one __init__ in a Python class?
+
+     no we didnt have more than one because they collapse on eachother
+
+Q9.  In how many places does self appear in a class?
+     Name all 3 and give an example of each.
+
+     1. At the time of accessing attribute
+     2. At the time of method definition
+     3. At the time of method call inside the class
+
+Q10. What is self? What does "current object" mean?
+
+     self is a normal attribute or data which give refernce to current object of the class
+
+Q11. Prove that self and obj1 point to the same memory
+     address. What does this confirm about self?
+
+     for this we check there memory address using id() in built function
+
+Q12. Does self HAVE to be named "self"? Can you name it
+     anything? What is the convention?
+
+     We can give any name insted of self but convention is , it should be in lower case and declare first in every method definition
+
+Q13. How do you call one method from another method
+     INSIDE the same class? What keyword is used?
+
+     to call one method to another : we used self 
+     for ex;
+     def method(self):
+          self.method1()
+
+Q14. Why must you write self.attribute_name to access
+     an attribute inside a method? What error occurs
+     if you just write attribute_name without self.?
+
+     We used self for attribute name because self is used for taking reference of object or values 
+     with self it raised NameError : that word is not defined
+
+Q15. In the BankATM project, why does __init__ call
+     self.show_menu()? What is the design advantage of
+     putting this call inside the constructor?
+
+     to execute every time for new object automatically
+     advantage : it calls it automatically 
+
+
+-------------------- 29 May ---------------------
+
+
+Q1. What is the difference between __str__ and __repr__?
+    When would you use each?
+
+    __str__ : is used to print objects
+    __repr__ : 
+
+Q2. Can you overload operators in Python? How?
+    Give an example using any class.
+
+     
+
+Q3. What is operator overloading? Why is it useful?
+
+Q4. If you write fr1 + fr2 in your code, which method
+    gets called internally? Explain the flow.
+
+    __add__ method calls internally
+    flow:
+    1. we create obj of that class
+    2. it first go under the class check every methods
+    3. then take deno and num from object print it with __str__
+    4. then goes to the __add__ method and it assigns that values
+    5. in print we add 2 objects with + operator
+
+Q5. What is the significance of returning a new object
+    from __add__ instead of modifying self?
+
+    __add__ returns a new object inste4ad of modifying self because the + operator is expected to create a new result 
+    while keeping the original operands unchanged.
+    self and other are simply references to the 2 objects participating in the addition
+
+    
+Q6. In the Fraction class, why do we need both self and other
+    as parameters in __add__?
+
+    Because for addition we need two objects with different memory address
+    for reference of both objects and one time
+    so we used self and other for referencing
+
+
+Q7. Python's built-in list, int, dict are all classes.
+    How does this relate to the concept of OOP?
+
+    Yes this are all classes and OOP is also work on classes and objects
+    in oop we can create our customize data type like list,tuple,dict
+
+Q8. What will happen if you do print(object) but have NOT
+    defined __str__ in your class?
+
+    It will give the memory address of the object
+
+Q9. What is the difference between instance variables
+    and class variables? Give an example.
+
+    instance variables are individual object and class instance are belongs from class
+    instance var are define inside the __init__ using self
+    class var are define inside the class and outside the methods
+     ex;
+     class Student:
+          school = "ABC"           # class var
+
+          def __init__(self,name):
+               self.name=name      # instance var
+
+     s1=Student("Gayatri")
+     print(s1.name)
+     print(s1.school)
+
+Q10. Explain the __init__ method. Is it a constructor?
+     How is it different from constructors in other languages like Java?
+
+     __init__() is a magic method which is automatically called whenever an obj is created from a class
+     is used for initialize the obj attribute
+
+     in java and other languages object name must be same as a constructor name
+
+
+-------------------- 30 May ---------------------
+
+SECTION 1: BASIC LEVEL
+
+
+Q1. What is Inheritance in Python?
+    Why do we use it in Object-Oriented Programming?
+
+    Inheritnace is term in python used to extract features from parent to child class
+    To avoid complex programs and it takes less time than procedural
+
+Q2. What is a parent class and a child class?
+    Give a real-life example of both.
+    Parent class is class from where we extract features
+    Child class is class where we used that extract features
+    ex;
+    class A:                       # Parent class
+     def parent(self):
+          print("Parent class")
+
+     class B(A):                   # Child class
+      def Child(self):
+          print("Child class")
+
+Q3. What is the syntax to inherit a class in Python?
+    Write a simple example.
+    sytnax : class class_name(inherit_class_name):
+    ex.
+     class A:                       
+     def parent(self):
+          print("Parent class")
+
+     class B(A):                   
+      def Child(self):
+          print("Child class")
+
+
+Q4. What does the 'pass' keyword do inside a class?
+    When would you use a class with only 'pass'?
+
+    It runs the class without argument declaration
+    When we want to run the class without any argument then we used pass
+
+Q5. If a child class does NOT define __init__,
+    what happens when you create its object?
+
+     It refers it from parent class
+
+Q6. If a child class DOES define its own __init__,
+    what happens to the parent's __init__?
+
+    They both take there own __init__ or we used super() key word to take parents class arguments in child class
+
+Q7. What is Method Overriding?
+    Why would a child class override a parent's method?
+
+    Method overriding means used same name of method in parent as well as child class
+    Because it takes there own method not parents method
+
+Q8. What is the difference between Inheritance and
+    a regular class that creates objects?
+
+    in inheritance we creates object of child class to call parent class 
+    and in regular class we creates object of main class
+
+Q9. What does it mean when we say Inheritance
+    represents an "is-a" relationship?
+    Give an example.
+
+    Inheritance represents as "is-a" relationship because the child class is a 
+    specialized form of parent class
+    ex;
+    class Vehicle:
+          def move(self):
+             print("Vehicle is moving")
+     class Car(Vehicle):
+          pass
+     
+     c=Car()
+     c.move()
+
+    
+Q10. Can a child class add its own new methods
+     in addition to the ones inherited?
+     Give an example.
+
+     Yes, child class can inherit methods from 
+     the parent class and also define its own new methods
+
+     class Animal:
+          def eat(self):
+               print("Animal is eating")
+
+     class Dog(Animal):
+          def bark(self):      
+               print("Dog is barking")
+
+     d = Dog()
+     d.eat()    
+     d.bark()   
