@@ -29,7 +29,6 @@ A collection of Python programs and projects covering fundamental to intermediat
 * Writing clean, reusable, and modular code
 * Object-oriented programming concepts
 * File and exception handling
-* Working with APIs and JSON data
 * Data validation using Pydantic
 
 ##  Real-World Applications
@@ -37,7 +36,6 @@ A collection of Python programs and projects covering fundamental to intermediat
 * Automating repetitive tasks and workflows
 * Building command-line tools and utilities
 * Processing and analyzing data
-* Integrating with REST APIs
 * Developing backend services
 * Creating automation scripts for businesses
 
