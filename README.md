@@ -17,7 +17,7 @@ A collection of Python programs and projects covering fundamental to intermediat
 * JSON Handling
 * Pydantic
 
-## 🛠 Tech Stack
+## Tech Stack
 
 * Python 3
 * Pydantic
